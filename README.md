@@ -58,6 +58,10 @@ finance-data-pipeline/
 
 3. **Load**  
    - Inserts transformed data into PostgreSQL `finance` schema.  
+   - Designed a **Star Schema** to optimize queries and reporting:  
+     - **Fact Table:** `transactions_fact`  
+     - **Dimension Tables:** `customer_dim`, `account_dim`, `date_dim`  
+   - This allows **efficient analytics and reporting**
 
 4. **Orchestration**  
    - Airflow DAGs manage task dependencies, retries, and logging.  
@@ -85,6 +89,7 @@ Access Airflow:
 
 Webserver: http://localhost:8080
 
-Username: airflow | Password: airflow
+Username: airflow | Password: airflow123
 
 Trigger the DAG finance_etl_pipeline manually or set the schedule.
+
