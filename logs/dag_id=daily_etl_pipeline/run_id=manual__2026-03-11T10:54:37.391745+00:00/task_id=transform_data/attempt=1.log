@@ -1,0 +1,40 @@
+[2026-03-11T10:55:04.330+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-11T10:55:04.368+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_etl_pipeline.transform_data manual__2026-03-11T10:54:37.391745+00:00 [queued]>
+[2026-03-11T10:55:04.379+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_etl_pipeline.transform_data manual__2026-03-11T10:54:37.391745+00:00 [queued]>
+[2026-03-11T10:55:04.379+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-03-11T10:55:04.396+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): transform_data> on 2026-03-11 10:54:37.391745+00:00
+[2026-03-11T10:55:04.405+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=5240) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-11T10:55:04.406+0000] {standard_task_runner.py:63} INFO - Started process 5241 to run task
+[2026-03-11T10:55:04.405+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'daily_etl_pipeline', 'transform_data', 'manual__2026-03-11T10:54:37.391745+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dag.py', '--cfg-path', '/tmp/tmpa31rsf6k']
+[2026-03-11T10:55:04.407+0000] {standard_task_runner.py:91} INFO - Job 59: Subtask transform_data
+[2026-03-11T10:55:04.429+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-11T10:55:04.482+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_etl_pipeline.transform_data manual__2026-03-11T10:54:37.391745+00:00 [running]> on host 662adb583b47
+[2026-03-11T10:55:04.618+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='daily_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T10:54:37.391745+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T10:54:37.391745+00:00'
+[2026-03-11T10:55:04.618+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-11T10:55:04.639+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-11T10:55:04.640+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark_jobs/transform_data.py']
+[2026-03-11T10:55:04.651+0000] {subprocess.py:86} INFO - Output:
+[2026-03-11T10:55:05.499+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:05,499 | INFO | Starting transformation...
+[2026-03-11T10:55:09.339+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-11T10:55:09.339+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-11T10:55:09.724+0000] {subprocess.py:93} INFO - 26/03/11 10:55:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-11T10:55:13.097+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:13,097 | INFO | Reading raw parquet from /opt/airflow/data_lake/raw/transaction_data.parquet...
+[2026-03-11T10:55:23.048+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8]                                                                                2026-03-11 10:55:23,046 | INFO | Total raw records: 1000000
+[2026-03-11T10:55:23.050+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:23,046 | INFO | Cleaning and standardizing data...
+[2026-03-11T10:55:23.595+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:23,594 | INFO | Existing processed parquet found. Deduplicating new records...
+[2026-03-11T10:55:24.295+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:24,294 | INFO | Existing processed count: 0
+[2026-03-11T10:55:24.297+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:24,295 | WARNING | Existing parquet is empty. Skipping deduplication.
+[2026-03-11T10:55:24.297+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:24,295 | INFO | Writing processed data to temp folder /opt/airflow/data_lake/processed/finance_processed.parquet_tmp_1773226524...
+[2026-03-11T10:55:26.720+0000] {subprocess.py:93} INFO - [Stage 8:>                                                          (0 + 8) / 8]26/03/11 10:55:26 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory
+[2026-03-11T10:55:26.723+0000] {subprocess.py:93} INFO - Scaling row group sizes to 95.00% for 8 writers
+[2026-03-11T10:55:32.049+0000] {subprocess.py:93} INFO - [Stage 8:=======>                                                   (1 + 7) / 8][Stage 8:=============================>                             (4 + 4) / 8]                                                                                2026-03-11 10:55:32,049 | INFO | Deleting old processed parquet at /opt/airflow/data_lake/processed/finance_processed.parquet...
+[2026-03-11T10:55:32.051+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:32,050 | INFO | Processed data saved to /opt/airflow/data_lake/processed/finance_processed.parquet
+[2026-03-11T10:55:32.852+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:32,851 | INFO | Final processed records count: 1000000
+[2026-03-11T10:55:33.354+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:33,354 | INFO | Transformation completed successfully.
+[2026-03-11T10:55:33.362+0000] {subprocess.py:93} INFO - 2026-03-11 10:55:33,355 | INFO | Closing down clientserver connection
+[2026-03-11T10:55:34.335+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-03-11T10:55:34.336+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-11T10:55:34.403+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=daily_etl_pipeline, task_id=transform_data, execution_date=20260311T105437, start_date=20260311T105504, end_date=20260311T105534
+[2026-03-11T10:55:34.447+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-11T10:55:34.480+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T10:55:34.482+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

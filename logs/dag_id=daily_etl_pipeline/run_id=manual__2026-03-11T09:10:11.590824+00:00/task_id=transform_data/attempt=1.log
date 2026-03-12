@@ -1,0 +1,132 @@
+[2026-03-11T09:11:34.763+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-11T09:11:34.927+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_etl_pipeline.transform_data manual__2026-03-11T09:10:11.590824+00:00 [queued]>
+[2026-03-11T09:11:34.998+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_etl_pipeline.transform_data manual__2026-03-11T09:10:11.590824+00:00 [queued]>
+[2026-03-11T09:11:34.999+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-03-11T09:11:35.087+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): transform_data> on 2026-03-11 09:10:11.590824+00:00
+[2026-03-11T09:11:35.135+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1923) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-11T09:11:35.139+0000] {standard_task_runner.py:63} INFO - Started process 1925 to run task
+[2026-03-11T09:11:35.134+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'daily_etl_pipeline', 'transform_data', 'manual__2026-03-11T09:10:11.590824+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dag.py', '--cfg-path', '/tmp/tmp3hlcrhua']
+[2026-03-11T09:11:35.150+0000] {standard_task_runner.py:91} INFO - Job 36: Subtask transform_data
+[2026-03-11T09:11:35.249+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-11T09:11:35.472+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_etl_pipeline.transform_data manual__2026-03-11T09:10:11.590824+00:00 [running]> on host cac6f62d160b
+[2026-03-11T09:11:35.917+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='daily_etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T09:10:11.590824+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T09:10:11.590824+00:00'
+[2026-03-11T09:11:35.920+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-11T09:11:36.023+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-11T09:11:36.027+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark_jobs/transform_data.py']
+[2026-03-11T09:11:36.071+0000] {subprocess.py:86} INFO - Output:
+[2026-03-11T09:11:38.732+0000] {subprocess.py:93} INFO - 2026-03-11 09:11:38,730 | INFO | Starting transformation...
+[2026-03-11T09:11:46.249+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-11T09:11:46.250+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-11T09:11:47.269+0000] {subprocess.py:93} INFO - 26/03/11 09:11:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-11T09:11:51.026+0000] {subprocess.py:93} INFO - 26/03/11 09:11:51 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2026-03-11T09:11:53.982+0000] {subprocess.py:93} INFO - 2026-03-11 09:11:53,981 | INFO | Reading raw parquet from /opt/airflow/data_lake/raw/transaction_data.parquet...
+[2026-03-11T09:12:15.933+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8][Stage 1:=============================>                             (4 + 4) / 8][Stage 3:>                                                          (0 + 1) / 1]                                                                                2026-03-11 09:12:15,932 | INFO | Total raw records: 1000000
+[2026-03-11T09:12:15.943+0000] {subprocess.py:93} INFO - 2026-03-11 09:12:15,933 | INFO | Cleaning and standardizing data...
+[2026-03-11T09:12:28.690+0000] {subprocess.py:93} INFO - [Stage 4:>                                                          (0 + 8) / 8][Stage 4:==============>                                            (2 + 6) / 8][Stage 4:====================================>                      (5 + 3) / 8][Stage 6:>                                                          (0 + 5) / 5][Stage 6:=======================>                                   (2 + 3) / 5]                                                                                2026-03-11 09:12:28,689 | INFO | Total processed records after deduplication: 1000000
+[2026-03-11T09:12:28.693+0000] {subprocess.py:93} INFO - 2026-03-11 09:12:28,690 | INFO | Existing processed parquet found. Appending only new records...
+[2026-03-11T09:12:34.891+0000] {subprocess.py:93} INFO - [Stage 11:=======>                                                  (1 + 7) / 8]                                                                                2026-03-11 09:12:34,890 | INFO | New unique records to append: 0
+[2026-03-11T09:12:39.319+0000] {subprocess.py:93} INFO - [Stage 15:===========================================>              (6 + 2) / 8]                                                                                [Stage 16:>                                                         (0 + 8) / 8][Stage 16:==============>                                           (2 + 6) / 8]26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/.part-00002-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet.crc]: it still exists.
+[2026-03-11T09:12:39.323+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/.part-00000-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet.crc]: it still exists.
+[2026-03-11T09:12:39.323+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/.part-00004-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet.crc]: it still exists.
+[2026-03-11T09:12:39.324+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/part-00001-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet]: it still exists.
+[2026-03-11T09:12:39.325+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/.part-00003-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet.crc]: it still exists.
+[2026-03-11T09:12:39.326+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/part-00003-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet]: it still exists.
+[2026-03-11T09:12:39.331+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/.part-00001-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet.crc]: it still exists.
+[2026-03-11T09:12:39.332+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/part-00005-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet]: it still exists.
+[2026-03-11T09:12:39.333+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/._SUCCESS.crc]: it still exists.
+[2026-03-11T09:12:39.334+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/.part-00005-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet.crc]: it still exists.
+[2026-03-11T09:12:39.335+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/part-00007-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet]: it still exists.
+[2026-03-11T09:12:39.336+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/.part-00006-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet.crc]: it still exists.
+[2026-03-11T09:12:39.337+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/part-00004-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet]: it still exists.
+[2026-03-11T09:12:39.338+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/part-00006-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet]: it still exists.
+[2026-03-11T09:12:39.339+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/part-00000-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet]: it still exists.
+[2026-03-11T09:12:39.340+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/.part-00007-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet.crc]: it still exists.
+[2026-03-11T09:12:39.340+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/part-00002-4c7e13f1-b6c9-4bb5-942e-a61eed75017d-c000.snappy.parquet]: it still exists.
+[2026-03-11T09:12:39.341+0000] {subprocess.py:93} INFO - 26/03/11 09:12:39 WARN FileUtil: Failed to delete file or dir [/opt/airflow/data_lake/processed/finance_processed.parquet/_SUCCESS]: it still exists.
+[2026-03-11T09:12:40.036+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-03-11T09:12:40.037+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/transform_data.py", line 107, in <module>
+[2026-03-11T09:12:40.044+0000] {subprocess.py:93} INFO -     transform()
+[2026-03-11T09:12:40.046+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/transform_data.py", line 97, in transform
+[2026-03-11T09:12:40.048+0000] {subprocess.py:93} INFO -     df_final.write.mode("overwrite").parquet(PROCESSED_PARQUET)
+[2026-03-11T09:12:40.052+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pyspark/sql/readwriter.py", line 1721, in parquet
+[2026-03-11T09:12:40.054+0000] {subprocess.py:93} INFO -     self._jwrite.parquet(path)
+[2026-03-11T09:12:40.055+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+[2026-03-11T09:12:40.056+0000] {subprocess.py:93} INFO -     return_value = get_return_value(
+[2026-03-11T09:12:40.057+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^
+[2026-03-11T09:12:40.058+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 179, in deco
+[2026-03-11T09:12:40.058+0000] {subprocess.py:93} INFO -     return f(*a, **kw)
+[2026-03-11T09:12:40.059+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^
+[2026-03-11T09:12:40.060+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/py4j/protocol.py", line 326, in get_return_value
+[2026-03-11T09:12:40.060+0000] {subprocess.py:93} INFO -     raise Py4JJavaError(
+[2026-03-11T09:12:40.064+0000] {subprocess.py:93} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o69.parquet.
+[2026-03-11T09:12:40.065+0000] {subprocess.py:93} INFO - : org.apache.spark.SparkException: Unable to clear output directory file:/opt/airflow/data_lake/processed/finance_processed.parquet prior to writing to it.
+[2026-03-11T09:12:40.066+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.errors.QueryExecutionErrors$.cannotClearOutputDirectoryError(QueryExecutionErrors.scala:794)
+[2026-03-11T09:12:40.067+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.deleteMatchingPartitions(InsertIntoHadoopFsRelationCommand.scala:239)
+[2026-03-11T09:12:40.068+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:131)
+[2026-03-11T09:12:40.069+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:113)
+[2026-03-11T09:12:40.070+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:111)
+[2026-03-11T09:12:40.071+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.executeCollect(commands.scala:125)
+[2026-03-11T09:12:40.072+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.$anonfun$executeCollect$1(AdaptiveSparkPlanExec.scala:390)
+[2026-03-11T09:12:40.072+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.withFinalPlanUpdate(AdaptiveSparkPlanExec.scala:418)
+[2026-03-11T09:12:40.073+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.executeCollect(AdaptiveSparkPlanExec.scala:390)
+[2026-03-11T09:12:40.074+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+[2026-03-11T09:12:40.075+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+[2026-03-11T09:12:40.077+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+[2026-03-11T09:12:40.078+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+[2026-03-11T09:12:40.080+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+[2026-03-11T09:12:40.082+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+[2026-03-11T09:12:40.083+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+[2026-03-11T09:12:40.083+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+[2026-03-11T09:12:40.084+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+[2026-03-11T09:12:40.086+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+[2026-03-11T09:12:40.087+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+[2026-03-11T09:12:40.089+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T09:12:40.090+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2026-03-11T09:12:40.091+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2026-03-11T09:12:40.092+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T09:12:40.093+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T09:12:40.094+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+[2026-03-11T09:12:40.095+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+[2026-03-11T09:12:40.097+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+[2026-03-11T09:12:40.098+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+[2026-03-11T09:12:40.099+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+[2026-03-11T09:12:40.102+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+[2026-03-11T09:12:40.104+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+[2026-03-11T09:12:40.106+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+[2026-03-11T09:12:40.108+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:240)
+[2026-03-11T09:12:40.109+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.parquet(DataFrameWriter.scala:792)
+[2026-03-11T09:12:40.111+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-03-11T09:12:40.111+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-03-11T09:12:40.112+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-03-11T09:12:40.113+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-03-11T09:12:40.114+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-03-11T09:12:40.114+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-03-11T09:12:40.115+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-03-11T09:12:40.117+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-03-11T09:12:40.119+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-03-11T09:12:40.120+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-03-11T09:12:40.121+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-03-11T09:12:40.122+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-11T09:12:40.123+0000] {subprocess.py:93} INFO - 
+[2026-03-11T09:12:40.125+0000] {subprocess.py:93} INFO - 2026-03-11 09:12:40,050 | INFO | Closing down clientserver connection
+[2026-03-11T09:12:41.278+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-11T09:12:41.280+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-11T09:12:41.343+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-11T09:12:41.357+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=daily_etl_pipeline, task_id=transform_data, execution_date=20260311T091011, start_date=20260311T091134, end_date=20260311T091241
+[2026-03-11T09:12:41.401+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 36 for task transform_data (Bash command failed. The command returned a non-zero exit code 1.; 1925)
+[2026-03-11T09:12:41.437+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-11T09:12:41.491+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T09:12:41.499+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

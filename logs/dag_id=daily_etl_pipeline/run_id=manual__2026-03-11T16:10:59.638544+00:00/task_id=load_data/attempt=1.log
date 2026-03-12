@@ -1,0 +1,318 @@
+[2026-03-11T16:12:51.399+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-11T16:12:51.486+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_etl_pipeline.load_data manual__2026-03-11T16:10:59.638544+00:00 [queued]>
+[2026-03-11T16:12:51.514+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_etl_pipeline.load_data manual__2026-03-11T16:10:59.638544+00:00 [queued]>
+[2026-03-11T16:12:51.516+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-03-11T16:12:51.565+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): load_data> on 2026-03-11 16:10:59.638544+00:00
+[2026-03-11T16:12:51.588+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6536) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-11T16:12:51.594+0000] {standard_task_runner.py:63} INFO - Started process 6537 to run task
+[2026-03-11T16:12:51.594+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'daily_etl_pipeline', 'load_data', 'manual__2026-03-11T16:10:59.638544+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dag.py', '--cfg-path', '/tmp/tmpreiolyqu']
+[2026-03-11T16:12:51.603+0000] {standard_task_runner.py:91} INFO - Job 102: Subtask load_data
+[2026-03-11T16:12:51.705+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-11T16:12:51.809+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_etl_pipeline.load_data manual__2026-03-11T16:10:59.638544+00:00 [running]> on host 8d060d40942f
+[2026-03-11T16:12:52.071+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='daily_etl_pipeline' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T16:10:59.638544+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T16:10:59.638544+00:00'
+[2026-03-11T16:12:52.072+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-11T16:12:52.112+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-11T16:12:52.115+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark_jobs/load_data.py']
+[2026-03-11T16:12:52.135+0000] {subprocess.py:86} INFO - Output:
+[2026-03-11T16:12:54.257+0000] {subprocess.py:93} INFO - 2026-03-11 16:12:54,257 | INFO | Starting curated load
+[2026-03-11T16:12:54.456+0000] {subprocess.py:93} INFO - 2026-03-11 16:12:54,455 | INFO | PostgreSQL connection successful.
+[2026-03-11T16:12:58.209+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/airflow/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2026-03-11T16:12:58.376+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/airflow/.ivy2/cache
+[2026-03-11T16:12:58.377+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/airflow/.ivy2/jars
+[2026-03-11T16:12:58.391+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2026-03-11T16:12:58.394+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-592043e7-3c51-48f8-9897-4d1c34c5c67a;1.0
+[2026-03-11T16:12:58.395+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-11T16:12:58.626+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2026-03-11T16:12:58.713+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2026-03-11T16:12:58.765+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 347ms :: artifacts dl 22ms
+[2026-03-11T16:12:58.765+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2026-03-11T16:12:58.766+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2026-03-11T16:12:58.767+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2026-03-11T16:12:58.768+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:12:58.769+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2026-03-11T16:12:58.771+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2026-03-11T16:12:58.773+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:12:58.780+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2026-03-11T16:12:58.781+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:12:58.782+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-592043e7-3c51-48f8-9897-4d1c34c5c67a
+[2026-03-11T16:12:58.783+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-11T16:12:58.792+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/12ms)
+[2026-03-11T16:12:59.390+0000] {subprocess.py:93} INFO - 26/03/11 16:12:59 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-11T16:13:00.126+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-11T16:13:00.128+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-11T16:13:04.468+0000] {subprocess.py:93} INFO - 2026-03-11 16:13:04,468 | INFO | Reading processed parquet
+[2026-03-11T16:13:15.593+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8][Stage 1:======================>                                    (3 + 5) / 8]                                                                                2026-03-11 16:13:15,593 | INFO | Records found: 1000000
+[2026-03-11T16:13:15.594+0000] {subprocess.py:93} INFO - /opt/airflow/spark_jobs/load_data.py:169: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+[2026-03-11T16:13:15.595+0000] {subprocess.py:93} INFO -   df = df.withColumn("load_timestamp", lit(datetime.utcnow()))
+[2026-03-11T16:13:16.461+0000] {subprocess.py:93} INFO - 26/03/11 16:13:16 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:16.469+0000] {subprocess.py:93} INFO - 26/03/11 16:13:16 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:16.477+0000] {subprocess.py:93} INFO - 26/03/11 16:13:16 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:22.104+0000] {subprocess.py:93} INFO - [Stage 4:>                                                          (0 + 8) / 8][Stage 4:=======>                                                   (1 + 7) / 8][Stage 4:=============================>                             (4 + 4) / 8]26/03/11 16:13:22 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:22.106+0000] {subprocess.py:93} INFO - 26/03/11 16:13:22 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:24.819+0000] {subprocess.py:93} INFO - [Stage 6:>                                                          (0 + 8) / 8][Stage 6:=======>                                                   (1 + 7) / 8][Stage 6:=============================>                             (4 + 4) / 8]26/03/11 16:13:24 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:24.822+0000] {subprocess.py:93} INFO - 26/03/11 16:13:24 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:38.758+0000] {subprocess.py:93} INFO - [Stage 9:>                                                          (0 + 1) / 1]                                                                                [Stage 10:>                                                         (0 + 8) / 8][Stage 10:=======>                                                  (1 + 7) / 8][Stage 12:>                                                         (0 + 8) / 8][Stage 12:==================================================>       (7 + 1) / 8]                                                                                2026-03-11 16:13:38,757 | INFO | finance.dim_customer empty → full reload (999964)
+[2026-03-11T16:13:40.323+0000] {subprocess.py:93} INFO - 26/03/11 16:13:40 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:40.327+0000] {subprocess.py:93} INFO - 26/03/11 16:13:40 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:40.330+0000] {subprocess.py:93} INFO - 26/03/11 16:13:40 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:41.936+0000] {subprocess.py:93} INFO - [Stage 16:>                                                         (0 + 8) / 8][Stage 16:=======>                                                  (1 + 7) / 8][Stage 16:=============================>                            (4 + 4) / 8]26/03/11 16:13:41 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:41.939+0000] {subprocess.py:93} INFO - 26/03/11 16:13:41 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:43.316+0000] {subprocess.py:93} INFO - [Stage 18:>                                                         (0 + 8) / 8][Stage 18:=====================>                                    (3 + 5) / 8]26/03/11 16:13:43 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:43.319+0000] {subprocess.py:93} INFO - 26/03/11 16:13:43 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2026-03-11T16:13:50.905+0000] {subprocess.py:93} INFO - [Stage 21:>                                                         (0 + 1) / 1]26/03/11 16:13:50 ERROR Executor: Exception in task 0.0 in stage 21.0 (TID 60)
+[2026-03-11T16:13:50.906+0000] {subprocess.py:93} INFO - java.sql.BatchUpdateException: Batch entry 1 INSERT INTO finance.dim_customer ("customer_name","customer_email","customer_id") VALUES ('LARRY PHILLIPS','aabbott@example.com',2) was aborted: ERROR: duplicate key value violates unique constraint "dim_customer_customer_email_key"
+[2026-03-11T16:13:50.907+0000] {subprocess.py:93} INFO -   Detail: Key (customer_email)=(aabbott@example.com) already exists.  Call getNextException to see other errors in the batch.
+[2026-03-11T16:13:50.907+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2026-03-11T16:13:50.908+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+[2026-03-11T16:13:50.909+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+[2026-03-11T16:13:50.914+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+[2026-03-11T16:13:50.915+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+[2026-03-11T16:13:50.916+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+[2026-03-11T16:13:50.916+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+[2026-03-11T16:13:50.922+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2026-03-11T16:13:50.922+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2026-03-11T16:13:50.923+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+[2026-03-11T16:13:50.923+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+[2026-03-11T16:13:50.924+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+[2026-03-11T16:13:50.928+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1039)
+[2026-03-11T16:13:50.930+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1039)
+[2026-03-11T16:13:50.931+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+[2026-03-11T16:13:50.932+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+[2026-03-11T16:13:50.933+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-03-11T16:13:50.934+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-11T16:13:50.935+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-03-11T16:13:50.936+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-11T16:13:50.938+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-11T16:13:50.938+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-11T16:13:50.939+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-03-11T16:13:50.941+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-11T16:13:50.942+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-11T16:13:50.944+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-11T16:13:50.945+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "dim_customer_customer_email_key"
+[2026-03-11T16:13:50.946+0000] {subprocess.py:93} INFO -   Detail: Key (customer_email)=(aabbott@example.com) already exists.
+[2026-03-11T16:13:50.947+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2026-03-11T16:13:50.948+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2026-03-11T16:13:50.949+0000] {subprocess.py:93} INFO - 	... 24 more
+[2026-03-11T16:13:50.970+0000] {subprocess.py:93} INFO - 26/03/11 16:13:50 WARN TaskSetManager: Lost task 0.0 in stage 21.0 (TID 60) (8d060d40942f executor driver): java.sql.BatchUpdateException: Batch entry 1 INSERT INTO finance.dim_customer ("customer_name","customer_email","customer_id") VALUES ('LARRY PHILLIPS','aabbott@example.com',2) was aborted: ERROR: duplicate key value violates unique constraint "dim_customer_customer_email_key"
+[2026-03-11T16:13:50.971+0000] {subprocess.py:93} INFO -   Detail: Key (customer_email)=(aabbott@example.com) already exists.  Call getNextException to see other errors in the batch.
+[2026-03-11T16:13:50.972+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2026-03-11T16:13:50.973+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+[2026-03-11T16:13:50.978+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+[2026-03-11T16:13:50.979+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+[2026-03-11T16:13:50.980+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+[2026-03-11T16:13:50.982+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+[2026-03-11T16:13:50.983+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+[2026-03-11T16:13:50.984+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2026-03-11T16:13:50.987+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2026-03-11T16:13:50.988+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+[2026-03-11T16:13:50.997+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+[2026-03-11T16:13:50.999+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+[2026-03-11T16:13:51.000+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1039)
+[2026-03-11T16:13:51.001+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1039)
+[2026-03-11T16:13:51.002+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+[2026-03-11T16:13:51.002+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+[2026-03-11T16:13:51.003+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-03-11T16:13:51.004+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-11T16:13:51.006+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-03-11T16:13:51.008+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-11T16:13:51.012+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-11T16:13:51.013+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-11T16:13:51.015+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-03-11T16:13:51.016+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-11T16:13:51.017+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-11T16:13:51.018+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-11T16:13:51.018+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "dim_customer_customer_email_key"
+[2026-03-11T16:13:51.019+0000] {subprocess.py:93} INFO -   Detail: Key (customer_email)=(aabbott@example.com) already exists.
+[2026-03-11T16:13:51.020+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2026-03-11T16:13:51.020+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2026-03-11T16:13:51.021+0000] {subprocess.py:93} INFO - 	... 24 more
+[2026-03-11T16:13:51.022+0000] {subprocess.py:93} INFO - 
+[2026-03-11T16:13:51.022+0000] {subprocess.py:93} INFO - 26/03/11 16:13:50 ERROR TaskSetManager: Task 0 in stage 21.0 failed 1 times; aborting job
+[2026-03-11T16:13:52.029+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-03-11T16:13:52.030+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/load_data.py", line 234, in <module>
+[2026-03-11T16:13:52.031+0000] {subprocess.py:93} INFO -     load_curated_layer()
+[2026-03-11T16:13:52.032+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/load_data.py", line 180, in load_curated_layer
+[2026-03-11T16:13:52.033+0000] {subprocess.py:93} INFO -     load_to_postgres(dim_customer, "finance.dim_customer")
+[2026-03-11T16:13:52.035+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/load_data.py", line 133, in load_to_postgres
+[2026-03-11T16:13:52.044+0000] {subprocess.py:93} INFO -     .save()
+[2026-03-11T16:13:52.045+0000] {subprocess.py:93} INFO -      ^^^^^^
+[2026-03-11T16:13:52.045+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pyspark/sql/readwriter.py", line 1461, in save
+[2026-03-11T16:13:52.046+0000] {subprocess.py:93} INFO -     self._jwrite.save()
+[2026-03-11T16:13:52.047+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+[2026-03-11T16:13:52.048+0000] {subprocess.py:93} INFO -     return_value = get_return_value(
+[2026-03-11T16:13:52.048+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^
+[2026-03-11T16:13:52.049+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 179, in deco
+[2026-03-11T16:13:52.049+0000] {subprocess.py:93} INFO -     return f(*a, **kw)
+[2026-03-11T16:13:52.050+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^
+[2026-03-11T16:13:52.051+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/py4j/protocol.py", line 326, in get_return_value
+[2026-03-11T16:13:52.052+0000] {subprocess.py:93} INFO -     raise Py4JJavaError(
+[2026-03-11T16:13:52.082+0000] {subprocess.py:93} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o59.save.
+[2026-03-11T16:13:52.083+0000] {subprocess.py:93} INFO - : org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 21.0 failed 1 times, most recent failure: Lost task 0.0 in stage 21.0 (TID 60) (8d060d40942f executor driver): java.sql.BatchUpdateException: Batch entry 1 INSERT INTO finance.dim_customer ("customer_name","customer_email","customer_id") VALUES ('LARRY PHILLIPS','aabbott@example.com',2) was aborted: ERROR: duplicate key value violates unique constraint "dim_customer_customer_email_key"
+[2026-03-11T16:13:52.084+0000] {subprocess.py:93} INFO -   Detail: Key (customer_email)=(aabbott@example.com) already exists.  Call getNextException to see other errors in the batch.
+[2026-03-11T16:13:52.084+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2026-03-11T16:13:52.085+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+[2026-03-11T16:13:52.086+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+[2026-03-11T16:13:52.086+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+[2026-03-11T16:13:52.087+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+[2026-03-11T16:13:52.088+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+[2026-03-11T16:13:52.088+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+[2026-03-11T16:13:52.089+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2026-03-11T16:13:52.090+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2026-03-11T16:13:52.090+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+[2026-03-11T16:13:52.091+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+[2026-03-11T16:13:52.092+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+[2026-03-11T16:13:52.094+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1039)
+[2026-03-11T16:13:52.094+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1039)
+[2026-03-11T16:13:52.095+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+[2026-03-11T16:13:52.097+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+[2026-03-11T16:13:52.098+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-03-11T16:13:52.099+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-11T16:13:52.100+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-03-11T16:13:52.101+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-11T16:13:52.102+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-11T16:13:52.103+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-11T16:13:52.104+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-03-11T16:13:52.104+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-11T16:13:52.105+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-11T16:13:52.106+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-11T16:13:52.107+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "dim_customer_customer_email_key"
+[2026-03-11T16:13:52.107+0000] {subprocess.py:93} INFO -   Detail: Key (customer_email)=(aabbott@example.com) already exists.
+[2026-03-11T16:13:52.108+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2026-03-11T16:13:52.109+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2026-03-11T16:13:52.110+0000] {subprocess.py:93} INFO - 	... 24 more
+[2026-03-11T16:13:52.111+0000] {subprocess.py:93} INFO - 
+[2026-03-11T16:13:52.112+0000] {subprocess.py:93} INFO - Driver stacktrace:
+[2026-03-11T16:13:52.113+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2856)
+[2026-03-11T16:13:52.114+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2792)
+[2026-03-11T16:13:52.115+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2791)
+[2026-03-11T16:13:52.116+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[2026-03-11T16:13:52.116+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[2026-03-11T16:13:52.118+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[2026-03-11T16:13:52.119+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2791)
+[2026-03-11T16:13:52.120+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1247)
+[2026-03-11T16:13:52.121+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1247)
+[2026-03-11T16:13:52.122+0000] {subprocess.py:93} INFO - 	at scala.Option.foreach(Option.scala:407)
+[2026-03-11T16:13:52.123+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1247)
+[2026-03-11T16:13:52.124+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:3060)
+[2026-03-11T16:13:52.124+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2994)
+[2026-03-11T16:13:52.125+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2983)
+[2026-03-11T16:13:52.126+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+[2026-03-11T16:13:52.127+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:989)
+[2026-03-11T16:13:52.128+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2398)
+[2026-03-11T16:13:52.129+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2419)
+[2026-03-11T16:13:52.130+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2438)
+[2026-03-11T16:13:52.131+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2463)
+[2026-03-11T16:13:52.132+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1039)
+[2026-03-11T16:13:52.133+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+[2026-03-11T16:13:52.134+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+[2026-03-11T16:13:52.135+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.withScope(RDD.scala:410)
+[2026-03-11T16:13:52.135+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1037)
+[2026-03-11T16:13:52.136+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.Dataset.$anonfun$foreachPartition$1(Dataset.scala:3514)
+[2026-03-11T16:13:52.137+0000] {subprocess.py:93} INFO - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+[2026-03-11T16:13:52.138+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.Dataset.$anonfun$withNewRDDExecutionId$1(Dataset.scala:4309)
+[2026-03-11T16:13:52.138+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+[2026-03-11T16:13:52.139+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+[2026-03-11T16:13:52.140+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+[2026-03-11T16:13:52.140+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+[2026-03-11T16:13:52.142+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+[2026-03-11T16:13:52.144+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.Dataset.withNewRDDExecutionId(Dataset.scala:4307)
+[2026-03-11T16:13:52.144+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.Dataset.foreachPartition(Dataset.scala:3514)
+[2026-03-11T16:13:52.145+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:901)
+[2026-03-11T16:13:52.146+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:70)
+[2026-03-11T16:13:52.146+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+[2026-03-11T16:13:52.146+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+[2026-03-11T16:13:52.147+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+[2026-03-11T16:13:52.147+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+[2026-03-11T16:13:52.147+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+[2026-03-11T16:13:52.148+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+[2026-03-11T16:13:52.148+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+[2026-03-11T16:13:52.149+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+[2026-03-11T16:13:52.149+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+[2026-03-11T16:13:52.150+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+[2026-03-11T16:13:52.150+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+[2026-03-11T16:13:52.150+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+[2026-03-11T16:13:52.151+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+[2026-03-11T16:13:52.151+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+[2026-03-11T16:13:52.152+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+[2026-03-11T16:13:52.152+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T16:13:52.153+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2026-03-11T16:13:52.153+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2026-03-11T16:13:52.154+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T16:13:52.154+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T16:13:52.155+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+[2026-03-11T16:13:52.155+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+[2026-03-11T16:13:52.156+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+[2026-03-11T16:13:52.156+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+[2026-03-11T16:13:52.156+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+[2026-03-11T16:13:52.157+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+[2026-03-11T16:13:52.157+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+[2026-03-11T16:13:52.160+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+[2026-03-11T16:13:52.161+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+[2026-03-11T16:13:52.161+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-03-11T16:13:52.162+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-03-11T16:13:52.162+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-03-11T16:13:52.163+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-03-11T16:13:52.163+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-03-11T16:13:52.164+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-03-11T16:13:52.164+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-03-11T16:13:52.164+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-03-11T16:13:52.165+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-03-11T16:13:52.165+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-03-11T16:13:52.166+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-03-11T16:13:52.166+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-11T16:13:52.166+0000] {subprocess.py:93} INFO - Caused by: java.sql.BatchUpdateException: Batch entry 1 INSERT INTO finance.dim_customer ("customer_name","customer_email","customer_id") VALUES ('LARRY PHILLIPS','aabbott@example.com',2) was aborted: ERROR: duplicate key value violates unique constraint "dim_customer_customer_email_key"
+[2026-03-11T16:13:52.167+0000] {subprocess.py:93} INFO -   Detail: Key (customer_email)=(aabbott@example.com) already exists.  Call getNextException to see other errors in the batch.
+[2026-03-11T16:13:52.167+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2026-03-11T16:13:52.168+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+[2026-03-11T16:13:52.168+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+[2026-03-11T16:13:52.168+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+[2026-03-11T16:13:52.169+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+[2026-03-11T16:13:52.169+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+[2026-03-11T16:13:52.169+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+[2026-03-11T16:13:52.170+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2026-03-11T16:13:52.170+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2026-03-11T16:13:52.170+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:746)
+[2026-03-11T16:13:52.171+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:902)
+[2026-03-11T16:13:52.171+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:901)
+[2026-03-11T16:13:52.171+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1039)
+[2026-03-11T16:13:52.171+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1039)
+[2026-03-11T16:13:52.172+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2438)
+[2026-03-11T16:13:52.172+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+[2026-03-11T16:13:52.172+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-03-11T16:13:52.173+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-11T16:13:52.173+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-03-11T16:13:52.173+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-11T16:13:52.175+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-11T16:13:52.176+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-11T16:13:52.177+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-03-11T16:13:52.177+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-11T16:13:52.178+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-11T16:13:52.178+0000] {subprocess.py:93} INFO - 	... 1 more
+[2026-03-11T16:13:52.178+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "dim_customer_customer_email_key"
+[2026-03-11T16:13:52.179+0000] {subprocess.py:93} INFO -   Detail: Key (customer_email)=(aabbott@example.com) already exists.
+[2026-03-11T16:13:52.179+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2026-03-11T16:13:52.179+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2026-03-11T16:13:52.179+0000] {subprocess.py:93} INFO - 	... 24 more
+[2026-03-11T16:13:52.180+0000] {subprocess.py:93} INFO - 
+[2026-03-11T16:13:52.180+0000] {subprocess.py:93} INFO - 2026-03-11 16:13:52,082 | INFO | Closing down clientserver connection
+[2026-03-11T16:13:53.204+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-11T16:13:53.207+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-11T16:13:53.248+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-11T16:13:53.261+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=daily_etl_pipeline, task_id=load_data, execution_date=20260311T161059, start_date=20260311T161251, end_date=20260311T161353
+[2026-03-11T16:13:53.301+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 102 for task load_data (Bash command failed. The command returned a non-zero exit code 1.; 6537)
+[2026-03-11T16:13:53.353+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-11T16:13:53.409+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T16:13:53.413+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

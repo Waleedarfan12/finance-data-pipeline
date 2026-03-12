@@ -1,0 +1,32 @@
+[2026-03-11T09:10:02.159+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-11T09:10:02.298+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T09:09:59.316246+00:00 [queued]>
+[2026-03-11T09:10:02.333+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T09:09:59.316246+00:00 [queued]>
+[2026-03-11T09:10:02.334+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-03-11T09:10:02.386+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingest_data> on 2026-03-11 09:09:59.316246+00:00
+[2026-03-11T09:10:02.418+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1389) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-11T09:10:02.421+0000] {standard_task_runner.py:63} INFO - Started process 1390 to run task
+[2026-03-11T09:10:02.419+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'daily_etl_pipeline', 'ingest_data', 'manual__2026-03-11T09:09:59.316246+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dag.py', '--cfg-path', '/tmp/tmppmyrweub']
+[2026-03-11T09:10:02.431+0000] {standard_task_runner.py:91} INFO - Job 33: Subtask ingest_data
+[2026-03-11T09:10:02.500+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-11T09:10:02.654+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T09:09:59.316246+00:00 [running]> on host cac6f62d160b
+[2026-03-11T09:10:03.035+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='daily_etl_pipeline' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T09:09:59.316246+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T09:09:59.316246+00:00'
+[2026-03-11T09:10:03.037+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-11T09:10:03.136+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-11T09:10:03.139+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', ' python /opt/airflow/spark_jobs/ingest_data.py']
+[2026-03-11T09:10:03.169+0000] {subprocess.py:86} INFO - Output:
+[2026-03-11T09:10:05.174+0000] {subprocess.py:93} INFO - 2026-03-11 09:10:05,173 | INFO | Starting ingestion...
+[2026-03-11T09:10:10.479+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-11T09:10:10.481+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-11T09:10:11.064+0000] {subprocess.py:93} INFO - 26/03/11 09:10:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-11T09:10:18.567+0000] {subprocess.py:93} INFO - 2026-03-11 09:10:18,567 | INFO | Reading CSV from /opt/airflow/data_lake/raw/transaction_data.csv...
+[2026-03-11T09:10:57.654+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8][Stage 1:=======>                                                   (1 + 7) / 8][Stage 1:===================================================>       (7 + 1) / 8]                                                                                [Stage 2:>                                                          (0 + 8) / 8]                                                                                2026-03-11 09:10:57,653 | INFO | Total records read from CSV: 1000000
+[2026-03-11T09:10:57.657+0000] {subprocess.py:93} INFO - 2026-03-11 09:10:57,654 | INFO | Existing Parquet found at /opt/airflow/data_lake/raw/transaction_data.parquet, checking for new records...
+[2026-03-11T09:11:14.092+0000] {subprocess.py:93} INFO - [Stage 5:>                                                          (0 + 1) / 1]                                                                                [Stage 6:>                                                          (0 + 8) / 8][Stage 6:======================>                                    (3 + 5) / 8]                                                                                [Stage 7:>                                                          (0 + 8) / 8][Stage 7:=======>                                                   (1 + 7) / 8][Stage 7:====================================>                      (5 + 3) / 8][Stage 7:============================================>              (6 + 2) / 8]                                                                                2026-03-11 09:11:14,092 | INFO | No new records to append. Parquet unchanged.
+[2026-03-11T09:11:15.451+0000] {subprocess.py:93} INFO - 2026-03-11 09:11:15,449 | INFO | Ingestion completed successfully.
+[2026-03-11T09:11:15.453+0000] {subprocess.py:93} INFO - 2026-03-11 09:11:15,450 | INFO | Closing down clientserver connection
+[2026-03-11T09:11:16.589+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-03-11T09:11:16.591+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-11T09:11:16.685+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=daily_etl_pipeline, task_id=ingest_data, execution_date=20260311T090959, start_date=20260311T091002, end_date=20260311T091116
+[2026-03-11T09:11:16.753+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-11T09:11:16.886+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T09:11:16.896+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,5 @@
+pyspark
+pandas
+requests
+psycopg2-binary
+faker

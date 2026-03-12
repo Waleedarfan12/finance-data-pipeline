@@ -1,0 +1,95 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: finance_postgres
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/01-init.sql
+
+  airflow-init:
+    image: apache/airflow:2.9.0
+    container_name: airflow_init
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    entrypoint: /bin/bash
+    command: -c "airflow db init && airflow users create \
+                 --username ${AIRFLOW_USER} \
+                 --firstname Admin \
+                 --lastname User \
+                 --role Admin \
+                 --email admin@example.com \
+                 --password ${AIRFLOW_PASSWORD}"
+
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: custom-airflow:2.9.0
+    container_name: airflow_webserver
+    restart: always
+    depends_on:
+      - airflow-init
+      - airflow-scheduler
+    env_file:
+      - .env
+    ports:
+      - "${AIRFLOW_PORT}:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./spark_jobs:/opt/airflow/spark_jobs
+      - ./data_lake:/opt/airflow/data_lake
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      DATA_LAKE_PATH: /opt/airflow/data_lake
+    command: webserver
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: custom-airflow:2.9.0
+    container_name: airflow_scheduler
+    restart: always
+    depends_on:
+      - airflow-init
+      - postgres
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./spark_jobs:/opt/airflow/spark_jobs
+      - ./data_lake:/opt/airflow/data_lake
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      DATA_LAKE_PATH: /opt/airflow/data_lake
+    command: scheduler
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${PGADMIN_PORT}:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  postgres_data: {}
+  pgadmin_data: {}

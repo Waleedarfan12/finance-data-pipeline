@@ -1,0 +1,54 @@
+[2026-03-11T16:01:41.730+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-11T16:01:41.854+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T16:01:39.530917+00:00 [queued]>
+[2026-03-11T16:01:41.896+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T16:01:39.530917+00:00 [queued]>
+[2026-03-11T16:01:41.897+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-03-11T16:01:41.949+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingest_data> on 2026-03-11 16:01:39.530917+00:00
+[2026-03-11T16:01:41.975+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4427) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-11T16:01:41.978+0000] {standard_task_runner.py:63} INFO - Started process 4428 to run task
+[2026-03-11T16:01:41.975+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'daily_etl_pipeline', 'ingest_data', 'manual__2026-03-11T16:01:39.530917+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dag.py', '--cfg-path', '/tmp/tmprucer0m5']
+[2026-03-11T16:01:41.983+0000] {standard_task_runner.py:91} INFO - Job 97: Subtask ingest_data
+[2026-03-11T16:01:42.094+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-11T16:01:42.368+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T16:01:39.530917+00:00 [running]> on host 8d060d40942f
+[2026-03-11T16:01:42.941+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='daily_etl_pipeline' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T16:01:39.530917+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T16:01:39.530917+00:00'
+[2026-03-11T16:01:42.943+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-11T16:01:43.015+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-11T16:01:43.021+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', ' python /opt/airflow/spark_jobs/ingest_data.py']
+[2026-03-11T16:01:43.046+0000] {subprocess.py:86} INFO - Output:
+[2026-03-11T16:01:44.952+0000] {subprocess.py:93} INFO - 2026-03-11 16:01:44,952 | INFO | Starting Load: Creating curated layer incrementally...
+[2026-03-11T16:01:50.555+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/airflow/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2026-03-11T16:01:50.749+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/airflow/.ivy2/cache
+[2026-03-11T16:01:50.750+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/airflow/.ivy2/jars
+[2026-03-11T16:01:50.760+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2026-03-11T16:01:50.763+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-07cca4c0-11c6-4598-bbb8-7b14eac8385c;1.0
+[2026-03-11T16:01:50.764+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-11T16:01:51.019+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2026-03-11T16:01:51.087+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2026-03-11T16:01:51.132+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 352ms :: artifacts dl 17ms
+[2026-03-11T16:01:51.133+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2026-03-11T16:01:51.133+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2026-03-11T16:01:51.134+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2026-03-11T16:01:51.135+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:01:51.135+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2026-03-11T16:01:51.136+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2026-03-11T16:01:51.136+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:01:51.137+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2026-03-11T16:01:51.138+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:01:51.143+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-07cca4c0-11c6-4598-bbb8-7b14eac8385c
+[2026-03-11T16:01:51.144+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-11T16:01:51.161+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/18ms)
+[2026-03-11T16:01:51.891+0000] {subprocess.py:93} INFO - 26/03/11 16:01:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-11T16:01:53.255+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-11T16:01:53.256+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-11T16:02:11.266+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8][Stage 1:=======>                                                   (1 + 7) / 8]                                                                                2026-03-11 16:02:11,264 | INFO | Processed records count: 1000000
+[2026-03-11T16:02:31.911+0000] {subprocess.py:93} INFO - [Stage 5:>                                                          (0 + 8) / 8][Stage 5:>                  (0 + 8) / 8][Stage 6:>                  (0 + 0) / 5][Stage 5:==>                (1 + 7) / 8][Stage 6:>                  (0 + 1) / 5][Stage 5:==>                (1 + 7) / 8][Stage 6:=======>           (2 + 1) / 5][Stage 5:=======>           (3 + 5) / 8][Stage 6:=======>           (2 + 3) / 5][Stage 6:===============================================>           (4 + 1) / 5][Stage 9:>                                                          (0 + 8) / 9][Stage 9:===================>                                       (3 + 6) / 9][Stage 9:=======================================>                   (6 + 3) / 9][Stage 9:=============================================>             (7 + 2) / 9]                                                                                2026-03-11 16:02:31,911 | INFO | No new customer records to load.
+[2026-03-11T16:02:36.363+0000] {subprocess.py:93} INFO - [Stage 15:=============================>                            (1 + 1) / 2]                                                                                [Stage 16:>                                                         (0 + 8) / 8][Stage 16:=======>                                                  (1 + 7) / 8][Stage 16:==============>                                           (2 + 6) / 8]                                                                                2026-03-11 16:02:36,363 | INFO | No new merchant records to load.
+[2026-03-11T16:02:39.865+0000] {subprocess.py:93} INFO - [Stage 21:>                                                         (0 + 8) / 8][Stage 21:==============>                                           (2 + 6) / 8][Stage 21:===========================================>              (6 + 2) / 8]                                                                                2026-03-11 16:02:39,865 | INFO | No new date records to load.
+[2026-03-11T16:02:45.794+0000] {subprocess.py:93} INFO - [Stage 28:==============>   (4 + 1) / 5][Stage 30:=========>        (1 + 1) / 2]                                                                                [Stage 28:==============================================>           (4 + 1) / 5][Stage 28:==============>   (4 + 1) / 5][Stage 32:>                 (0 + 7) / 8][Stage 28:==============>   (4 + 1) / 5][Stage 32:====>             (2 + 6) / 8][Stage 28:==============>   (4 + 1) / 5][Stage 32:======>           (3 + 5) / 8][Stage 28:==============>   (4 + 1) / 5][Stage 32:===============>  (7 + 1) / 8][Stage 28:==============================================>           (4 + 1) / 5]                                                                                2026-03-11 16:02:45,793 | INFO | No new transactions to load.
+[2026-03-11T16:02:46.489+0000] {subprocess.py:93} INFO - 2026-03-11 16:02:46,489 | INFO | Incremental load completed successfully.
+[2026-03-11T16:02:46.490+0000] {subprocess.py:93} INFO - 2026-03-11 16:02:46,490 | INFO | Closing down clientserver connection
+[2026-03-11T16:02:47.532+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-03-11T16:02:47.535+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-11T16:02:47.645+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=daily_etl_pipeline, task_id=ingest_data, execution_date=20260311T160139, start_date=20260311T160141, end_date=20260311T160247
+[2026-03-11T16:02:47.714+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-11T16:02:47.821+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T16:02:47.831+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

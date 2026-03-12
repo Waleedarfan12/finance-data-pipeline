@@ -1,0 +1,71 @@
+[2026-03-12T07:45:38.890+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-12T07:45:38.964+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-12T07:45:33.567945+00:00 [queued]>
+[2026-03-12T07:45:38.979+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-12T07:45:33.567945+00:00 [queued]>
+[2026-03-12T07:45:38.980+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-03-12T07:45:39.001+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingest_data> on 2026-03-12 07:45:33.567945+00:00
+[2026-03-12T07:45:39.016+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=434) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-12T07:45:39.018+0000] {standard_task_runner.py:63} INFO - Started process 435 to run task
+[2026-03-12T07:45:39.014+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'daily_etl_pipeline', 'ingest_data', 'manual__2026-03-12T07:45:33.567945+00:00', '--job-id', '110', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dag.py', '--cfg-path', '/tmp/tmpg4mffthv']
+[2026-03-12T07:45:39.019+0000] {standard_task_runner.py:91} INFO - Job 110: Subtask ingest_data
+[2026-03-12T07:45:39.070+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-12T07:45:39.162+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-12T07:45:33.567945+00:00 [running]> on host 8d060d40942f
+[2026-03-12T07:45:39.348+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='daily_etl_pipeline' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-12T07:45:33.567945+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-12T07:45:33.567945+00:00'
+[2026-03-12T07:45:39.349+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-12T07:45:39.385+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-12T07:45:39.387+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', ' python /opt/airflow/spark_jobs/ingest_data.py']
+[2026-03-12T07:45:39.409+0000] {subprocess.py:86} INFO - Output:
+[2026-03-12T07:45:40.913+0000] {subprocess.py:93} INFO - 2026-03-12 07:45:40,913 | INFO | Starting Load: Creating curated layer incrementally...
+[2026-03-12T07:45:43.724+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/airflow/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2026-03-12T07:45:43.864+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/airflow/.ivy2/cache
+[2026-03-12T07:45:43.865+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/airflow/.ivy2/jars
+[2026-03-12T07:45:43.874+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2026-03-12T07:45:43.876+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-afda3009-9135-4558-8570-8aa6113e347d;1.0
+[2026-03-12T07:45:43.876+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-12T07:45:44.033+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2026-03-12T07:45:44.067+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2026-03-12T07:45:44.094+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 207ms :: artifacts dl 12ms
+[2026-03-12T07:45:44.095+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2026-03-12T07:45:44.096+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2026-03-12T07:45:44.096+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2026-03-12T07:45:44.097+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-12T07:45:44.097+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2026-03-12T07:45:44.098+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2026-03-12T07:45:44.099+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-12T07:45:44.099+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2026-03-12T07:45:44.099+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-12T07:45:44.105+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-afda3009-9135-4558-8570-8aa6113e347d
+[2026-03-12T07:45:44.106+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-12T07:45:44.123+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/17ms)
+[2026-03-12T07:45:44.868+0000] {subprocess.py:93} INFO - 26/03/12 07:45:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-12T07:45:45.426+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-12T07:45:45.426+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-12T07:46:05.490+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8]                                                                                2026-03-12 07:46:05,490 | INFO | Processed records count: 1000000
+[2026-03-12T07:46:16.181+0000] {subprocess.py:93} INFO - [Stage 5:=======================================>                   (2 + 1) / 3]                                                                                [Stage 6:>                                                          (0 + 8) / 8][Stage 6:==============>                                            (2 + 6) / 8][Stage 6:=============================>                             (4 + 4) / 8][Stage 8:>                                                          (0 + 8) / 8][Stage 8:==============>                                            (2 + 6) / 8]                                                                                Traceback (most recent call last):
+[2026-03-12T07:46:16.183+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/ingest_data.py", line 179, in <module>
+[2026-03-12T07:46:16.183+0000] {subprocess.py:93} INFO -     load_curated_layer()
+[2026-03-12T07:46:16.184+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/ingest_data.py", line 95, in load_curated_layer
+[2026-03-12T07:46:16.185+0000] {subprocess.py:93} INFO -     df_new_customer = df_new_customer.withColumn("customer_id", row_number().over(window_customer))
+[2026-03-12T07:46:16.185+0000] {subprocess.py:93} INFO -                                                                 ^^^^^^^^^^
+[2026-03-12T07:46:16.186+0000] {subprocess.py:93} INFO - NameError: name 'row_number' is not defined
+[2026-03-12T07:46:16.187+0000] {subprocess.py:93} INFO - 2026-03-12 07:46:16,182 | INFO | Closing down clientserver connection
+[2026-03-12T07:46:17.185+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-12T07:46:17.188+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-12T07:46:17.257+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-12T07:46:17.284+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=daily_etl_pipeline, task_id=ingest_data, execution_date=20260312T074533, start_date=20260312T074538, end_date=20260312T074617
+[2026-03-12T07:46:17.357+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 110 for task ingest_data (Bash command failed. The command returned a non-zero exit code 1.; 435)
+[2026-03-12T07:46:17.407+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-12T07:46:17.502+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-12T07:46:17.514+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

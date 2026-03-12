@@ -1,0 +1,93 @@
+[2026-03-11T16:21:45.068+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-11T16:21:45.148+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T16:21:43.203763+00:00 [queued]>
+[2026-03-11T16:21:45.173+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T16:21:43.203763+00:00 [queued]>
+[2026-03-11T16:21:45.174+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-03-11T16:21:45.221+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingest_data> on 2026-03-11 16:21:43.203763+00:00
+[2026-03-11T16:21:45.242+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6957) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-11T16:21:45.240+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'daily_etl_pipeline', 'ingest_data', 'manual__2026-03-11T16:21:43.203763+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dag.py', '--cfg-path', '/tmp/tmpmqw4s0hi']
+[2026-03-11T16:21:45.244+0000] {standard_task_runner.py:63} INFO - Started process 6958 to run task
+[2026-03-11T16:21:45.244+0000] {standard_task_runner.py:91} INFO - Job 103: Subtask ingest_data
+[2026-03-11T16:21:45.293+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-11T16:21:45.445+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_etl_pipeline.ingest_data manual__2026-03-11T16:21:43.203763+00:00 [running]> on host 8d060d40942f
+[2026-03-11T16:21:45.830+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='daily_etl_pipeline' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T16:21:43.203763+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T16:21:43.203763+00:00'
+[2026-03-11T16:21:45.832+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-11T16:21:45.910+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-11T16:21:45.918+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', ' python /opt/airflow/spark_jobs/ingest_data.py']
+[2026-03-11T16:21:45.952+0000] {subprocess.py:86} INFO - Output:
+[2026-03-11T16:21:48.144+0000] {subprocess.py:93} INFO - 2026-03-11 16:21:48,143 | INFO | Starting Load: Creating curated layer incrementally...
+[2026-03-11T16:21:54.061+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/airflow/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2026-03-11T16:21:54.248+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/airflow/.ivy2/cache
+[2026-03-11T16:21:54.249+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/airflow/.ivy2/jars
+[2026-03-11T16:21:54.262+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2026-03-11T16:21:54.265+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-dbd25640-6cf8-41f1-b100-f04bbd569df5;1.0
+[2026-03-11T16:21:54.266+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-11T16:21:54.685+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2026-03-11T16:21:54.737+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2026-03-11T16:21:54.784+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 498ms :: artifacts dl 21ms
+[2026-03-11T16:21:54.785+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2026-03-11T16:21:54.786+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2026-03-11T16:21:54.787+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2026-03-11T16:21:54.791+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:21:54.792+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2026-03-11T16:21:54.793+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2026-03-11T16:21:54.794+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:21:54.795+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2026-03-11T16:21:54.796+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T16:21:54.805+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-dbd25640-6cf8-41f1-b100-f04bbd569df5
+[2026-03-11T16:21:54.806+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-11T16:21:54.821+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/15ms)
+[2026-03-11T16:21:55.338+0000] {subprocess.py:93} INFO - 26/03/11 16:21:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-11T16:21:55.801+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-11T16:21:55.802+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-11T16:22:12.462+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8]                                                                                2026-03-11 16:22:12,458 | INFO | Processed records count: 1000000
+[2026-03-11T16:22:26.978+0000] {subprocess.py:93} INFO - [Stage 5:>                                                          (0 + 8) / 8][Stage 5:>                  (0 + 8) / 8][Stage 6:>                  (0 + 0) / 5][Stage 5:==>                (1 + 7) / 8][Stage 6:>                  (0 + 1) / 5][Stage 5:==>                (1 + 7) / 8][Stage 6:>                  (0 + 2) / 5][Stage 5:=========>         (4 + 4) / 8][Stage 6:===========>       (3 + 2) / 5][Stage 6:===============================================>           (4 + 1) / 5][Stage 9:>                                                          (0 + 8) / 9][Stage 9:======>                                                    (1 + 8) / 9][Stage 9:=============================================>             (7 + 2) / 9]                                                                                2026-03-11 16:22:26,977 | INFO | No new customer records to load.
+[2026-03-11T16:22:31.805+0000] {subprocess.py:93} INFO - [Stage 15:=============================>                            (1 + 1) / 2]                                                                                [Stage 16:>                                                         (0 + 8) / 8][Stage 16:=======>                                                  (1 + 7) / 8]                                                                                2026-03-11 16:22:31,805 | INFO | No new merchant records to load.
+[2026-03-11T16:22:33.428+0000] {subprocess.py:93} INFO - [Stage 21:====================================>                     (5 + 3) / 8]                                                                                2026-03-11 16:22:33,427 | INFO | No new date records to load.
+[2026-03-11T16:22:37.037+0000] {subprocess.py:93} INFO - [Stage 28:==============================================>           (4 + 1) / 5]                                                                                2026-03-11 16:22:37,036 | INFO | No new transactions to load.
+[2026-03-11T16:22:37.178+0000] {subprocess.py:93} INFO - 26/03/11 16:22:37 ERROR BypassMergeSortShuffleWriter: Unable to delete file for partition 195
+[2026-03-11T16:22:37.430+0000] {subprocess.py:93} INFO - 26/03/11 16:22:37 ERROR TaskContextImpl: Error in TaskCompletionListener
+[2026-03-11T16:22:37.431+0000] {subprocess.py:93} INFO - org.apache.spark.SparkException: Block broadcast_29 does not exist
+[2026-03-11T16:22:37.432+0000] {subprocess.py:93} INFO - 	at org.apache.spark.errors.SparkCoreErrors$.blockDoesNotExistError(SparkCoreErrors.scala:318)
+[2026-03-11T16:22:37.432+0000] {subprocess.py:93} INFO - 	at org.apache.spark.storage.BlockInfoManager.blockInfo(BlockInfoManager.scala:269)
+[2026-03-11T16:22:37.433+0000] {subprocess.py:93} INFO - 	at org.apache.spark.storage.BlockInfoManager.unlock(BlockInfoManager.scala:390)
+[2026-03-11T16:22:37.433+0000] {subprocess.py:93} INFO - 	at org.apache.spark.storage.BlockManager.releaseLock(BlockManager.scala:1309)
+[2026-03-11T16:22:37.433+0000] {subprocess.py:93} INFO - 	at org.apache.spark.broadcast.TorrentBroadcast.$anonfun$releaseBlockManagerLock$1(TorrentBroadcast.scala:319)
+[2026-03-11T16:22:37.434+0000] {subprocess.py:93} INFO - 	at org.apache.spark.broadcast.TorrentBroadcast.$anonfun$releaseBlockManagerLock$1$adapted(TorrentBroadcast.scala:319)
+[2026-03-11T16:22:37.434+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext$$anon$1.onTaskCompletion(TaskContext.scala:137)
+[2026-03-11T16:22:37.434+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContextImpl.$anonfun$invokeTaskCompletionListeners$1(TaskContextImpl.scala:144)
+[2026-03-11T16:22:37.435+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContextImpl.$anonfun$invokeTaskCompletionListeners$1$adapted(TaskContextImpl.scala:144)
+[2026-03-11T16:22:37.435+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContextImpl.invokeListeners(TaskContextImpl.scala:199)
+[2026-03-11T16:22:37.435+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContextImpl.invokeTaskCompletionListeners(TaskContextImpl.scala:144)
+[2026-03-11T16:22:37.436+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContextImpl.markTaskCompleted(TaskContextImpl.scala:137)
+[2026-03-11T16:22:37.436+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:177)
+[2026-03-11T16:22:37.436+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-03-11T16:22:37.437+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-03-11T16:22:37.437+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-11T16:22:37.437+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-11T16:22:37.437+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-11T16:22:37.438+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-03-11T16:22:37.438+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-11T16:22:37.438+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-11T16:22:37.438+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-11T16:22:37.439+0000] {subprocess.py:93} INFO - 26/03/11 16:22:37 ERROR Utils: Uncaught exception in thread Executor task launch worker for task 2.0 in stage 28.0 (TID 63)
+[2026-03-11T16:22:37.439+0000] {subprocess.py:93} INFO - java.lang.NullPointerException: Cannot invoke "org.apache.spark.SparkEnv.blockManager()" because the return value of "org.apache.spark.SparkEnv$.get()" is null
+[2026-03-11T16:22:37.439+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.$anonfun$run$3(Task.scala:146)
+[2026-03-11T16:22:37.440+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1375)
+[2026-03-11T16:22:37.440+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:144)
+[2026-03-11T16:22:37.440+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-03-11T16:22:37.441+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-03-11T16:22:37.441+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-03-11T16:22:37.441+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-03-11T16:22:37.441+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-03-11T16:22:37.442+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-03-11T16:22:37.442+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-03-11T16:22:37.442+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-11T16:22:37.447+0000] {subprocess.py:93} INFO - 26/03/11 16:22:37 ERROR Executor: Exception in task 2.0 in stage 28.0 (TID 63): /tmp/blockmgr-f9a14961-5372-4f9e-940c-d5e266dc20c3/01/shuffle_8_63_0.index.6bffb08a-6c97-4f7b-8c99-e95839826113 (No such file or directory)
+[2026-03-11T16:22:37.709+0000] {subprocess.py:93} INFO - 2026-03-11 16:22:37,708 | INFO | Incremental load completed successfully.
+[2026-03-11T16:22:37.711+0000] {subprocess.py:93} INFO - 2026-03-11 16:22:37,710 | INFO | Closing down clientserver connection
+[2026-03-11T16:22:38.715+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-03-11T16:22:38.717+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-11T16:22:38.782+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=daily_etl_pipeline, task_id=ingest_data, execution_date=20260311T162143, start_date=20260311T162145, end_date=20260311T162238
+[2026-03-11T16:22:38.823+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-11T16:22:38.888+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T16:22:38.893+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,155 @@
+[2026-03-11T12:23:31.257+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-11T12:23:31.317+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_etl_pipeline.load_data manual__2026-03-11T12:21:12.496552+00:00 [queued]>
+[2026-03-11T12:23:31.332+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_etl_pipeline.load_data manual__2026-03-11T12:21:12.496552+00:00 [queued]>
+[2026-03-11T12:23:31.332+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-03-11T12:23:31.358+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): load_data> on 2026-03-11 12:21:12.496552+00:00
+[2026-03-11T12:23:31.372+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6063) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-11T12:23:31.374+0000] {standard_task_runner.py:63} INFO - Started process 6064 to run task
+[2026-03-11T12:23:31.371+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'daily_etl_pipeline', 'load_data', 'manual__2026-03-11T12:21:12.496552+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/finance_etl_dag.py', '--cfg-path', '/tmp/tmp5vk9c4rp']
+[2026-03-11T12:23:31.374+0000] {standard_task_runner.py:91} INFO - Job 77: Subtask load_data
+[2026-03-11T12:23:31.408+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-03-11T12:23:31.478+0000] {task_command.py:426} INFO - Running <TaskInstance: daily_etl_pipeline.load_data manual__2026-03-11T12:21:12.496552+00:00 [running]> on host 8d060d40942f
+[2026-03-11T12:23:31.717+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='daily_etl_pipeline' AIRFLOW_CTX_TASK_ID='load_data' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T12:21:12.496552+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T12:21:12.496552+00:00'
+[2026-03-11T12:23:31.720+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-11T12:23:31.763+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-03-11T12:23:31.764+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/spark_jobs/load_data.py']
+[2026-03-11T12:23:31.783+0000] {subprocess.py:86} INFO - Output:
+[2026-03-11T12:23:33.556+0000] {subprocess.py:93} INFO - 2026-03-11 12:23:33,555 | INFO | Starting Load: Creating curated layer...
+[2026-03-11T12:23:37.722+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/airflow/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2026-03-11T12:23:37.839+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/airflow/.ivy2/cache
+[2026-03-11T12:23:37.840+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/airflow/.ivy2/jars
+[2026-03-11T12:23:37.846+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2026-03-11T12:23:37.847+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-e1cc1005-8858-4316-8af1-e75b2d747bc6;1.0
+[2026-03-11T12:23:37.848+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-11T12:23:38.086+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2026-03-11T12:23:38.128+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2026-03-11T12:23:38.160+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 300ms :: artifacts dl 13ms
+[2026-03-11T12:23:38.161+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2026-03-11T12:23:38.162+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2026-03-11T12:23:38.162+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2026-03-11T12:23:38.163+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T12:23:38.163+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2026-03-11T12:23:38.164+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2026-03-11T12:23:38.164+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T12:23:38.165+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2026-03-11T12:23:38.166+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-03-11T12:23:38.167+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-e1cc1005-8858-4316-8af1-e75b2d747bc6
+[2026-03-11T12:23:38.167+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-03-11T12:23:38.176+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/8ms)
+[2026-03-11T12:23:38.591+0000] {subprocess.py:93} INFO - 26/03/11 12:23:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-03-11T12:23:39.030+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-03-11T12:23:39.030+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-03-11T12:23:42.133+0000] {subprocess.py:93} INFO - 2026-03-11 12:23:42,132 | INFO | Reading processed data from /opt/airflow/data_lake/processed/finance_processed.parquet...
+[2026-03-11T12:23:51.559+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 0) / 1][Stage 0:>                                                          (0 + 1) / 1][Stage 0:===========================================================(1 + 0) / 1]                                                                                [Stage 1:>                                                          (0 + 8) / 8][Stage 1:============================================>              (6 + 2) / 8]                                                                                2026-03-11 12:23:51,558 | INFO | Processed records count: 1000000
+[2026-03-11T12:23:51.560+0000] {subprocess.py:93} INFO - /opt/airflow/spark_jobs/load_data.py:93: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+[2026-03-11T12:23:51.561+0000] {subprocess.py:93} INFO -   df = df.withColumn("load_timestamp", lit(datetime.utcnow()))
+[2026-03-11T12:24:04.129+0000] {subprocess.py:93} INFO - [Stage 4:>                                                          (0 + 8) / 8][Stage 4:=======>                                                   (1 + 7) / 8][Stage 4:===========================================================(8 + 0) / 8][Stage 6:>                                                          (0 + 8) / 8][Stage 6:=======>                                                   (1 + 7) / 8][Stage 6:==============>                                            (2 + 6) / 8][Stage 9:>                                                          (0 + 8) / 8]26/03/11 12:24:04 WARN MemoryManager: Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory
+[2026-03-11T12:24:04.130+0000] {subprocess.py:93} INFO - Scaling row group sizes to 95.00% for 8 writers
+[2026-03-11T12:24:09.026+0000] {subprocess.py:93} INFO - [Stage 9:======================>                                    (3 + 5) / 8][Stage 9:=============================>                             (4 + 4) / 8][Stage 9:===================================================>       (7 + 1) / 8]                                                                                2026-03-11 12:24:09,026 | INFO | dim_customer saved at /opt/airflow/data_lake/curated/dim_customer.parquet
+[2026-03-11T12:24:16.875+0000] {subprocess.py:93} INFO - [Stage 10:>                                                         (0 + 8) / 8][Stage 10:==============>                                           (2 + 6) / 8][Stage 12:>                                                         (0 + 8) / 8][Stage 12:==============>                                           (2 + 6) / 8][Stage 12:=============================>                            (4 + 4) / 8]                                                                                [Stage 16:>                                                         (0 + 8) / 8][Stage 16:=======>                                                  (1 + 7) / 8][Stage 16:=====================>                                    (3 + 5) / 8][Stage 18:==============>                                           (2 + 6) / 8]                                                                                2026-03-11 12:24:16,874 | INFO | Loading dim_customer (999964 rows) to PostgreSQL...
+[2026-03-11T12:24:17.328+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-03-11T12:24:17.329+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/load_data.py", line 158, in <module>
+[2026-03-11T12:24:17.329+0000] {subprocess.py:93} INFO -     load_curated_layer()
+[2026-03-11T12:24:17.330+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/load_data.py", line 104, in load_curated_layer
+[2026-03-11T12:24:17.330+0000] {subprocess.py:93} INFO -     load_to_postgres(dim_customer, "dim_customer")
+[2026-03-11T12:24:17.330+0000] {subprocess.py:93} INFO -   File "/opt/airflow/spark_jobs/load_data.py", line 60, in load_to_postgres
+[2026-03-11T12:24:17.331+0000] {subprocess.py:93} INFO -     .save()
+[2026-03-11T12:24:17.331+0000] {subprocess.py:93} INFO -      ^^^^^^
+[2026-03-11T12:24:17.332+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pyspark/sql/readwriter.py", line 1461, in save
+[2026-03-11T12:24:17.332+0000] {subprocess.py:93} INFO -     self._jwrite.save()
+[2026-03-11T12:24:17.333+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/py4j/java_gateway.py", line 1322, in __call__
+[2026-03-11T12:24:17.334+0000] {subprocess.py:93} INFO -     return_value = get_return_value(
+[2026-03-11T12:24:17.334+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^
+[2026-03-11T12:24:17.335+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 179, in deco
+[2026-03-11T12:24:17.336+0000] {subprocess.py:93} INFO -     return f(*a, **kw)
+[2026-03-11T12:24:17.336+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^
+[2026-03-11T12:24:17.337+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/py4j/protocol.py", line 326, in get_return_value
+[2026-03-11T12:24:17.337+0000] {subprocess.py:93} INFO -     raise Py4JJavaError(
+[2026-03-11T12:24:17.337+0000] {subprocess.py:93} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o63.save.
+[2026-03-11T12:24:17.338+0000] {subprocess.py:93} INFO - : org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+[2026-03-11T12:24:17.338+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+[2026-03-11T12:24:17.339+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+[2026-03-11T12:24:17.339+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+[2026-03-11T12:24:17.340+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.makeConnection(Driver.java:443)
+[2026-03-11T12:24:17.341+0000] {subprocess.py:93} INFO - 	at org.postgresql.Driver.connect(Driver.java:297)
+[2026-03-11T12:24:17.342+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.BasicConnectionProvider.getConnection(BasicConnectionProvider.scala:49)
+[2026-03-11T12:24:17.343+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.connection.ConnectionProviderBase.create(ConnectionProvider.scala:102)
+[2026-03-11T12:24:17.344+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1(JdbcDialects.scala:160)
+[2026-03-11T12:24:17.345+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.jdbc.JdbcDialect.$anonfun$createConnectionFactory$1$adapted(JdbcDialects.scala:156)
+[2026-03-11T12:24:17.345+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:50)
+[2026-03-11T12:24:17.346+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:48)
+[2026-03-11T12:24:17.347+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:75)
+[2026-03-11T12:24:17.347+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:73)
+[2026-03-11T12:24:17.348+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.executeCollect(commands.scala:84)
+[2026-03-11T12:24:17.348+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.$anonfun$applyOrElse$1(QueryExecution.scala:107)
+[2026-03-11T12:24:17.349+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$6(SQLExecution.scala:125)
+[2026-03-11T12:24:17.349+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:201)
+[2026-03-11T12:24:17.350+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:108)
+[2026-03-11T12:24:17.350+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:900)
+[2026-03-11T12:24:17.351+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:66)
+[2026-03-11T12:24:17.351+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:107)
+[2026-03-11T12:24:17.351+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution$$anonfun$eagerlyExecuteCommands$1.applyOrElse(QueryExecution.scala:98)
+[2026-03-11T12:24:17.351+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.$anonfun$transformDownWithPruning$1(TreeNode.scala:461)
+[2026-03-11T12:24:17.352+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(origin.scala:76)
+[2026-03-11T12:24:17.352+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDownWithPruning(TreeNode.scala:461)
+[2026-03-11T12:24:17.352+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.org$apache$spark$sql$catalyst$plans$logical$AnalysisHelper$$super$transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T12:24:17.352+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning(AnalysisHelper.scala:267)
+[2026-03-11T12:24:17.353+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper.transformDownWithPruning$(AnalysisHelper.scala:263)
+[2026-03-11T12:24:17.353+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T12:24:17.354+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.transformDownWithPruning(LogicalPlan.scala:32)
+[2026-03-11T12:24:17.355+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.trees.TreeNode.transformDown(TreeNode.scala:437)
+[2026-03-11T12:24:17.356+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.eagerlyExecuteCommands(QueryExecution.scala:98)
+[2026-03-11T12:24:17.357+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted$lzycompute(QueryExecution.scala:85)
+[2026-03-11T12:24:17.358+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.commandExecuted(QueryExecution.scala:83)
+[2026-03-11T12:24:17.358+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.assertCommandExecuted(QueryExecution.scala:142)
+[2026-03-11T12:24:17.359+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:859)
+[2026-03-11T12:24:17.359+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:388)
+[2026-03-11T12:24:17.360+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:361)
+[2026-03-11T12:24:17.360+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:248)
+[2026-03-11T12:24:17.361+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2026-03-11T12:24:17.361+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+[2026-03-11T12:24:17.362+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2026-03-11T12:24:17.362+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+[2026-03-11T12:24:17.362+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2026-03-11T12:24:17.363+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2026-03-11T12:24:17.363+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2026-03-11T12:24:17.364+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2026-03-11T12:24:17.364+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2026-03-11T12:24:17.364+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2026-03-11T12:24:17.364+0000] {subprocess.py:93} INFO - 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2026-03-11T12:24:17.364+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-03-11T12:24:17.365+0000] {subprocess.py:93} INFO - Caused by: java.net.ConnectException: Connection refused
+[2026-03-11T12:24:17.365+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+[2026-03-11T12:24:17.366+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:684)
+[2026-03-11T12:24:17.366+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+[2026-03-11T12:24:17.367+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+[2026-03-11T12:24:17.367+0000] {subprocess.py:93} INFO - 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+[2026-03-11T12:24:17.367+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket.connect(Socket.java:633)
+[2026-03-11T12:24:17.368+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+[2026-03-11T12:24:17.368+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+[2026-03-11T12:24:17.369+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+[2026-03-11T12:24:17.370+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+[2026-03-11T12:24:17.370+0000] {subprocess.py:93} INFO - 	... 50 more
+[2026-03-11T12:24:17.371+0000] {subprocess.py:93} INFO - 
+[2026-03-11T12:24:17.372+0000] {subprocess.py:93} INFO - 2026-03-11 12:24:17,333 | INFO | Closing down clientserver connection
+[2026-03-11T12:24:18.460+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-03-11T12:24:18.462+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-11T12:24:18.526+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-03-11T12:24:18.547+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=daily_etl_pipeline, task_id=load_data, execution_date=20260311T122112, start_date=20260311T122331, end_date=20260311T122418
+[2026-03-11T12:24:18.611+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 77 for task load_data (Bash command failed. The command returned a non-zero exit code 1.; 6064)
+[2026-03-11T12:24:18.664+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-03-11T12:24:18.738+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T12:24:18.750+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
