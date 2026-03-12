@@ -873,3 +873,654 @@
 [2026-03-12T08:42:54.057+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:42:54.056+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2026-03-12T08:42:54.283+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:42:54.282+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
 [2026-03-12T08:42:54.394+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.920 seconds
+[2026-03-12T08:43:25.152+0000] {processor.py:161} INFO - Started process (PID=5829) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:43:25.154+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:43:25.159+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:43:25.158+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:43:25.187+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:43:25.240+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:43:25.240+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:43:25.277+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:43:25.277+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:43:25.304+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.172 seconds
+[2026-03-12T08:43:55.994+0000] {processor.py:161} INFO - Started process (PID=5834) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:43:55.997+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:43:56.001+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:43:56.000+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:43:56.027+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:43:56.073+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:43:56.073+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:43:56.103+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:43:56.102+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:43:56.131+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.152 seconds
+[2026-03-12T08:44:26.602+0000] {processor.py:161} INFO - Started process (PID=5839) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:44:26.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:44:26.607+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:44:26.606+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:44:26.629+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:44:26.692+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:44:26.692+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:44:26.775+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:44:26.770+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:44:26.821+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.230 seconds
+[2026-03-12T08:44:57.429+0000] {processor.py:161} INFO - Started process (PID=5844) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:44:57.430+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:44:57.434+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:44:57.433+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:44:57.462+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:44:57.522+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:44:57.522+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:44:57.550+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:44:57.550+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:44:57.573+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.151 seconds
+[2026-03-12T08:45:28.213+0000] {processor.py:161} INFO - Started process (PID=5849) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:45:28.214+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:45:28.217+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:45:28.216+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:45:28.233+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:45:28.277+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:45:28.276+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:45:28.304+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:45:28.304+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:45:28.327+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.123 seconds
+[2026-03-12T08:45:58.892+0000] {processor.py:161} INFO - Started process (PID=5854) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:45:58.893+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:45:58.895+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:45:58.895+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:45:58.912+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:45:58.957+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:45:58.957+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:45:58.999+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:45:58.999+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:45:59.030+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.146 seconds
+[2026-03-12T08:46:29.614+0000] {processor.py:161} INFO - Started process (PID=5859) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:46:29.620+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:46:29.624+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:46:29.624+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:46:29.641+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:46:29.684+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:46:29.684+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:46:29.724+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:46:29.724+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:46:29.761+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.157 seconds
+[2026-03-12T08:47:00.295+0000] {processor.py:161} INFO - Started process (PID=5864) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:47:00.296+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:47:00.301+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:47:00.300+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:47:00.323+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:47:00.364+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:47:00.364+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:47:00.394+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:47:00.394+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:47:00.419+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.137 seconds
+[2026-03-12T08:47:30.912+0000] {processor.py:161} INFO - Started process (PID=5869) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:47:30.914+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:47:30.918+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:47:30.917+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:47:30.935+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:47:30.986+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:47:30.986+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:47:31.019+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:47:31.019+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:47:31.046+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.143 seconds
+[2026-03-12T08:48:01.642+0000] {processor.py:161} INFO - Started process (PID=5874) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:48:01.644+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:48:01.647+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:48:01.647+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:48:01.670+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:48:01.722+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:48:01.722+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:48:01.765+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:48:01.764+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:48:01.799+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.166 seconds
+[2026-03-12T08:48:32.309+0000] {processor.py:161} INFO - Started process (PID=5879) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:48:32.311+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:48:32.314+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:48:32.313+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:48:32.329+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:48:32.371+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:48:32.370+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:48:32.415+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:48:32.414+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:48:32.438+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.142 seconds
+[2026-03-12T08:49:03.052+0000] {processor.py:161} INFO - Started process (PID=5884) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:49:03.053+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:49:03.059+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:49:03.059+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:49:03.076+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:49:03.126+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:49:03.125+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:49:03.175+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:49:03.175+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:49:03.227+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.187 seconds
+[2026-03-12T08:49:33.315+0000] {processor.py:161} INFO - Started process (PID=5889) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:49:33.322+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:49:33.325+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:49:33.325+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:49:33.352+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:49:33.414+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:49:33.413+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:49:33.443+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:49:33.443+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:49:33.467+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.167 seconds
+[2026-03-12T08:50:03.694+0000] {processor.py:161} INFO - Started process (PID=5894) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:50:03.695+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:50:03.698+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:50:03.698+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:50:03.720+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:50:03.772+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:50:03.772+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:50:03.808+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:50:03.807+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:50:03.842+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.162 seconds
+[2026-03-12T08:50:34.281+0000] {processor.py:161} INFO - Started process (PID=5899) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:50:34.288+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:50:34.291+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:50:34.290+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:50:34.311+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:50:34.355+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:50:34.355+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:50:34.387+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:50:34.387+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:50:34.419+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.157 seconds
+[2026-03-12T08:51:04.796+0000] {processor.py:161} INFO - Started process (PID=5904) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:51:04.797+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:51:04.800+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:51:04.800+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:51:04.822+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:51:04.864+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:51:04.863+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:51:04.892+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:51:04.891+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:51:04.916+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.133 seconds
+[2026-03-12T08:51:35.484+0000] {processor.py:161} INFO - Started process (PID=5909) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:51:35.486+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:51:35.489+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:51:35.488+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:51:35.507+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:51:35.554+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:51:35.553+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:51:35.588+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:51:35.588+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:51:35.613+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.143 seconds
+[2026-03-12T08:52:05.690+0000] {processor.py:161} INFO - Started process (PID=5914) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:52:05.692+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:52:05.694+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:52:05.694+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:52:05.711+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:52:05.755+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:52:05.755+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:52:05.784+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:52:05.783+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:52:05.807+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.129 seconds
+[2026-03-12T08:52:36.382+0000] {processor.py:161} INFO - Started process (PID=5919) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:52:36.385+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:52:36.387+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:52:36.387+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:52:36.404+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:52:36.450+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:52:36.449+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:52:36.479+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:52:36.478+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:52:36.507+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.135 seconds
+[2026-03-12T08:53:06.783+0000] {processor.py:161} INFO - Started process (PID=5924) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:53:06.785+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:53:06.787+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:53:06.787+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:53:06.804+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:53:06.843+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:53:06.843+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:53:06.876+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:53:06.876+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:53:06.902+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.127 seconds
+[2026-03-12T08:53:37.825+0000] {processor.py:161} INFO - Started process (PID=5929) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:53:37.827+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:53:37.830+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:53:37.829+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:53:37.850+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:53:37.910+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:53:37.909+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:53:37.948+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:53:37.947+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:53:37.975+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.159 seconds
+[2026-03-12T08:54:08.322+0000] {processor.py:161} INFO - Started process (PID=5934) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:54:08.324+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:54:08.327+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:54:08.326+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:54:08.343+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:54:08.381+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:54:08.380+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:54:08.410+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:54:08.409+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:54:08.434+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.124 seconds
+[2026-03-12T08:54:38.879+0000] {processor.py:161} INFO - Started process (PID=5939) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:54:38.880+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:54:38.882+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:54:38.882+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:54:38.897+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:54:38.937+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:54:38.937+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:54:38.967+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:54:38.966+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:54:38.994+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.123 seconds
+[2026-03-12T08:55:09.068+0000] {processor.py:161} INFO - Started process (PID=5944) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:55:09.072+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:55:09.075+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:55:09.075+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:55:09.099+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:55:09.148+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:55:09.148+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:55:09.188+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:55:09.188+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:55:09.219+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.165 seconds
+[2026-03-12T08:55:39.818+0000] {processor.py:161} INFO - Started process (PID=5949) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:55:39.819+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:55:39.822+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:55:39.821+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:55:39.847+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:55:39.898+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:55:39.898+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:55:39.936+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:55:39.935+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:55:39.962+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.154 seconds
+[2026-03-12T08:56:10.901+0000] {processor.py:161} INFO - Started process (PID=5954) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:56:10.908+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:56:10.911+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:56:10.910+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:56:10.936+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:56:11.024+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:56:11.024+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:56:11.092+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:56:11.091+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:56:11.142+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.253 seconds
+[2026-03-12T08:56:41.942+0000] {processor.py:161} INFO - Started process (PID=5959) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:56:41.943+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:56:41.948+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:56:41.947+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:56:41.970+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:56:42.115+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:56:42.114+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:56:42.275+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:56:42.274+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:56:42.339+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.410 seconds
+[2026-03-12T08:57:12.400+0000] {processor.py:161} INFO - Started process (PID=5964) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:57:12.407+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:57:12.410+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:57:12.409+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:57:12.427+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:57:12.472+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:57:12.472+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:57:12.621+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:57:12.620+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:57:12.758+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.374 seconds
+[2026-03-12T08:57:42.852+0000] {processor.py:161} INFO - Started process (PID=5969) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:57:42.853+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:57:42.856+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:57:42.855+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:57:42.884+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:57:42.922+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:57:42.921+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:57:42.949+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:57:42.949+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:57:42.970+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.131 seconds
+[2026-03-12T08:58:13.440+0000] {processor.py:161} INFO - Started process (PID=5974) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:58:13.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:58:13.444+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:58:13.443+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:58:13.463+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:58:13.519+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:58:13.519+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:58:13.573+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:58:13.573+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:58:13.601+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.171 seconds
+[2026-03-12T08:58:43.665+0000] {processor.py:161} INFO - Started process (PID=5979) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:58:43.666+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:58:43.669+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:58:43.669+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:58:43.684+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:58:43.721+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:58:43.721+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:58:43.807+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:58:43.806+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:58:43.912+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.256 seconds
+[2026-03-12T08:59:13.965+0000] {processor.py:161} INFO - Started process (PID=5984) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:59:13.969+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:59:13.971+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:59:13.971+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:59:13.990+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:59:14.031+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:59:14.030+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:59:14.091+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:59:14.091+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:59:14.186+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.233 seconds
+[2026-03-12T08:59:44.299+0000] {processor.py:161} INFO - Started process (PID=5989) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:59:44.300+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T08:59:44.302+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:59:44.302+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:59:44.317+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T08:59:44.477+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:59:44.476+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T08:59:44.584+0000] {logging_mixin.py:188} INFO - [2026-03-12T08:59:44.584+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T08:59:44.647+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.355 seconds
+[2026-03-12T09:00:15.454+0000] {processor.py:161} INFO - Started process (PID=5994) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:00:15.457+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:00:15.460+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:00:15.459+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:00:15.523+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:00:15.772+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:00:15.771+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:00:15.915+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:00:15.915+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:00:15.994+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.554 seconds
+[2026-03-12T09:00:46.626+0000] {processor.py:161} INFO - Started process (PID=5999) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:00:46.631+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:00:46.640+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:00:46.639+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:00:46.675+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:00:46.762+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:00:46.762+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:00:46.817+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:00:46.816+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:00:46.853+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.249 seconds
+[2026-03-12T09:01:17.303+0000] {processor.py:161} INFO - Started process (PID=6004) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:01:17.305+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:01:17.307+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:01:17.307+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:01:17.325+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:01:17.369+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:01:17.369+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:01:17.410+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:01:17.409+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:01:17.486+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.193 seconds
+[2026-03-12T09:01:48.003+0000] {processor.py:161} INFO - Started process (PID=6009) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:01:48.005+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:01:48.008+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:01:48.008+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:01:48.023+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:01:48.059+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:01:48.058+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:01:48.097+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:01:48.095+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:01:48.197+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.199 seconds
+[2026-03-12T09:02:19.030+0000] {processor.py:161} INFO - Started process (PID=6014) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:02:19.031+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:02:19.034+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:02:19.033+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:02:19.052+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:02:19.101+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:02:19.101+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:02:19.134+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:02:19.133+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:02:19.156+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.136 seconds
+[2026-03-12T09:02:50.023+0000] {processor.py:161} INFO - Started process (PID=6019) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:02:50.025+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:02:50.027+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:02:50.027+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:02:50.043+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:02:50.081+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:02:50.081+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:02:50.110+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:02:50.110+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:02:50.136+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.124 seconds
+[2026-03-12T09:03:20.900+0000] {processor.py:161} INFO - Started process (PID=6024) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:03:20.901+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:03:20.903+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:03:20.902+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:03:20.916+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:03:20.954+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:03:20.953+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:03:20.979+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:03:20.979+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:03:21.002+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.109 seconds
+[2026-03-12T09:03:51.104+0000] {processor.py:161} INFO - Started process (PID=6029) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:03:51.106+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:03:51.110+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:03:51.110+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:03:51.132+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:03:51.197+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:03:51.196+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:03:51.238+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:03:51.238+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:03:51.265+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.172 seconds
+[2026-03-12T09:04:21.846+0000] {processor.py:161} INFO - Started process (PID=6034) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:04:21.847+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:04:21.850+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:04:21.850+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:04:21.868+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:04:21.911+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:04:21.911+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:04:21.954+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:04:21.954+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:04:21.983+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.149 seconds
+[2026-03-12T09:04:52.322+0000] {processor.py:161} INFO - Started process (PID=6039) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:04:52.328+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:04:52.330+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:04:52.330+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:04:52.354+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:04:52.405+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:04:52.404+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:04:52.465+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:04:52.464+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:04:52.544+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.231 seconds
+[2026-03-12T09:05:22.685+0000] {processor.py:161} INFO - Started process (PID=6044) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:05:22.686+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:05:22.689+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:05:22.689+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:05:22.707+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:05:22.406+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:05:22.405+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:05:22.500+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:05:22.500+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:05:22.552+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.299 seconds
+[2026-03-12T09:05:53.402+0000] {processor.py:161} INFO - Started process (PID=6049) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:05:53.409+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:05:53.414+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:05:53.413+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:05:53.471+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:05:53.621+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:05:53.620+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:05:53.765+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:05:53.764+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:05:53.872+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.509 seconds
+[2026-03-12T09:06:24.377+0000] {processor.py:161} INFO - Started process (PID=6054) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:06:24.378+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:06:24.381+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:06:24.380+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:06:24.397+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:06:24.455+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:06:24.454+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:06:24.489+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:06:24.488+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:06:24.514+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.145 seconds
+[2026-03-12T09:06:54.700+0000] {processor.py:161} INFO - Started process (PID=6059) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:06:54.702+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:06:54.704+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:06:54.704+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:06:54.719+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:06:54.758+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:06:54.757+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:06:54.881+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:06:54.881+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:06:54.979+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.287 seconds
+[2026-03-12T09:07:25.442+0000] {processor.py:161} INFO - Started process (PID=6064) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:07:25.443+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:07:25.446+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:07:25.445+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:07:25.463+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:07:25.624+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:07:25.624+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:07:26.063+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:07:26.060+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:07:26.221+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.788 seconds
+[2026-03-12T09:07:56.284+0000] {processor.py:161} INFO - Started process (PID=6069) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:07:56.286+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:07:56.290+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:07:56.289+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:07:56.306+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:07:56.343+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:07:56.343+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:07:56.370+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:07:56.370+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:07:56.420+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.146 seconds
+[2026-03-12T09:08:26.848+0000] {processor.py:161} INFO - Started process (PID=6074) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:08:26.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:08:26.853+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:08:26.853+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:08:26.886+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:08:27.013+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:08:27.012+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:08:27.467+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:08:27.466+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:08:27.564+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.730 seconds
+[2026-03-12T09:08:57.696+0000] {processor.py:161} INFO - Started process (PID=6079) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:08:57.697+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:08:57.700+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:08:57.700+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:08:57.726+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:08:57.791+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:08:57.790+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:08:57.857+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:08:57.856+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:08:57.907+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.224 seconds
+[2026-03-12T09:09:28.486+0000] {processor.py:161} INFO - Started process (PID=6084) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:09:28.487+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:09:28.490+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:09:28.490+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:09:28.506+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:09:28.550+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:09:28.549+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:09:28.583+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:09:28.583+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:09:28.614+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.137 seconds
+[2026-03-12T09:09:59.217+0000] {processor.py:161} INFO - Started process (PID=6089) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:09:59.219+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:09:59.224+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:09:59.224+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:09:59.250+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:09:59.300+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:09:59.300+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:09:59.335+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:09:59.335+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:09:59.437+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.234 seconds
+[2026-03-12T09:10:29.503+0000] {processor.py:161} INFO - Started process (PID=6094) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:10:29.505+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:10:29.510+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:10:29.509+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:10:29.548+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:10:29.701+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:10:29.700+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:10:30.000+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:10:29.999+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:10:30.143+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.660 seconds
+[2026-03-12T09:15:20.630+0000] {processor.py:161} INFO - Started process (PID=6099) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:15:20.633+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:15:20.652+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:15:20.650+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:15:20.742+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:15:21.000+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:15:20.992+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:15:21.310+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:15:21.309+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:15:21.471+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.894 seconds
+[2026-03-12T09:16:08.312+0000] {processor.py:161} INFO - Started process (PID=6106) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:16:08.375+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:16:09.245+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:16:09.240+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:16:09.696+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:16:10.303+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:16:10.302+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:16:10.646+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:16:10.628+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:16:11.058+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 3.104 seconds
+[2026-03-12T09:16:41.352+0000] {processor.py:161} INFO - Started process (PID=6115) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:16:41.414+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:16:41.431+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:16:41.425+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:16:41.775+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:16:42.264+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:16:42.261+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:16:42.430+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:16:42.429+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:16:42.482+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 1.433 seconds
+[2026-03-12T09:17:12.693+0000] {processor.py:161} INFO - Started process (PID=6120) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:17:12.697+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:17:12.706+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:17:12.704+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:17:12.787+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:17:12.969+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:17:12.969+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:17:13.024+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:17:13.022+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:17:13.107+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.447 seconds
+[2026-03-12T09:17:43.364+0000] {processor.py:161} INFO - Started process (PID=6125) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:17:43.366+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:17:43.369+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:17:43.369+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:17:43.394+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:17:43.529+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:17:43.527+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:17:43.918+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:17:43.916+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:17:44.094+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.743 seconds
+[2026-03-12T09:18:14.435+0000] {processor.py:161} INFO - Started process (PID=6130) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:18:14.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:18:14.449+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:18:14.448+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:18:14.519+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:18:14.655+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:18:14.654+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:18:14.719+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:18:14.719+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:18:14.792+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.385 seconds
+[2026-03-12T09:18:45.030+0000] {processor.py:161} INFO - Started process (PID=6135) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:18:45.035+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:18:45.049+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:18:45.047+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:18:45.120+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:18:45.256+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:18:45.255+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:18:45.417+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:18:45.416+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:18:45.477+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.500 seconds
+[2026-03-12T09:19:15.822+0000] {processor.py:161} INFO - Started process (PID=6140) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:19:15.834+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:19:15.844+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:19:15.842+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:19:15.911+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:19:16.072+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:19:16.070+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:19:16.185+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:19:16.184+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:19:16.273+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.488 seconds
+[2026-03-12T09:19:46.567+0000] {processor.py:161} INFO - Started process (PID=6145) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:19:46.569+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:19:46.574+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:19:46.573+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:19:46.608+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:19:46.717+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:19:46.717+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:19:46.856+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:19:46.854+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:19:46.964+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.416 seconds
+[2026-03-12T09:20:17.312+0000] {processor.py:161} INFO - Started process (PID=6150) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:20:17.315+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:20:17.360+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:20:17.359+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:20:17.482+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:20:17.834+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:20:17.834+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:20:18.029+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:20:18.028+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:20:18.157+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.922 seconds
+[2026-03-12T09:20:48.521+0000] {processor.py:161} INFO - Started process (PID=6155) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:20:48.525+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:20:48.533+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:20:48.532+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:20:48.594+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:20:48.804+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:20:48.804+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:20:48.880+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:20:48.879+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:20:48.954+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.470 seconds
+[2026-03-12T09:21:19.292+0000] {processor.py:161} INFO - Started process (PID=6160) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:21:19.302+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:21:19.311+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:21:19.310+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:21:19.370+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:21:19.462+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:21:19.461+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:21:19.541+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:21:19.540+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:21:19.696+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.436 seconds
+[2026-03-12T09:21:49.930+0000] {processor.py:161} INFO - Started process (PID=6165) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:21:49.931+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:21:49.933+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:21:49.933+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:21:49.948+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:21:49.988+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:21:49.988+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:21:50.145+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:21:50.145+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:21:50.224+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.302 seconds
+[2026-03-12T09:22:20.399+0000] {processor.py:161} INFO - Started process (PID=6170) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:22:20.401+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:22:20.404+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:22:20.403+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:22:20.423+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:22:20.491+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:22:20.490+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:22:20.575+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:22:20.572+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:22:20.643+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.254 seconds
+[2026-03-12T09:22:50.862+0000] {processor.py:161} INFO - Started process (PID=6175) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:22:50.864+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:22:50.869+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:22:50.869+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:22:50.900+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:22:51.007+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:22:51.007+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:22:51.092+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:22:51.091+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:22:51.138+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.293 seconds
+[2026-03-12T09:23:21.334+0000] {processor.py:161} INFO - Started process (PID=6180) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:23:21.336+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:23:21.339+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:23:21.339+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:23:21.360+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:23:21.518+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:23:21.518+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:23:21.699+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:23:21.699+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:23:21.795+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.473 seconds
+[2026-03-12T09:23:51.997+0000] {processor.py:161} INFO - Started process (PID=6185) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:23:51.998+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:23:52.001+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:23:52.000+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:23:52.028+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:23:52.080+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:23:52.080+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:23:52.119+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:23:52.118+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:23:52.152+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.165 seconds
+[2026-03-12T09:24:22.230+0000] {processor.py:161} INFO - Started process (PID=6190) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:24:22.234+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:24:22.242+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:24:22.241+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:24:22.285+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:24:22.458+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:24:22.457+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:24:22.782+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:24:22.780+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:24:23.008+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.798 seconds
+[2026-03-12T09:24:53.331+0000] {processor.py:161} INFO - Started process (PID=6195) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:24:53.334+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:24:53.342+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:24:53.341+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:24:53.384+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:24:53.447+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:24:53.447+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:24:53.491+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:24:53.490+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:24:53.532+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.234 seconds
+[2026-03-12T09:25:24.331+0000] {processor.py:161} INFO - Started process (PID=6200) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:25:24.333+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:25:24.336+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:25:24.336+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:25:24.358+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:25:24.415+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:25:24.415+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:25:24.482+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:25:24.481+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:25:24.583+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.264 seconds
+[2026-03-12T09:25:55.071+0000] {processor.py:161} INFO - Started process (PID=6205) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:25:55.072+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:25:55.076+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:25:55.075+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:25:55.103+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:25:55.163+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:25:55.162+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:25:55.248+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:25:55.247+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:25:55.327+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.270 seconds
+[2026-03-12T09:26:25.450+0000] {processor.py:161} INFO - Started process (PID=6210) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:26:25.462+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:26:25.468+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:26:25.467+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:26:25.518+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:26:25.723+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:26:25.722+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:26:25.864+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:26:25.859+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:26:25.934+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.508 seconds
+[2026-03-12T09:26:56.293+0000] {processor.py:161} INFO - Started process (PID=6215) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:26:56.304+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:26:56.310+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:26:56.309+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:26:56.377+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:26:56.760+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:26:56.760+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:26:57.211+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:26:57.208+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:26:57.375+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 1.131 seconds
+[2026-03-12T09:27:27.540+0000] {processor.py:161} INFO - Started process (PID=6220) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:27:27.543+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:27:27.548+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:27:27.547+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:27:27.588+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:27:27.746+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:27:27.745+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:27:28.015+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:27:28.014+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:27:28.059+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.533 seconds
+[2026-03-12T09:27:58.159+0000] {processor.py:161} INFO - Started process (PID=6225) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:27:58.160+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:27:58.162+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:27:58.162+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:27:58.181+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:27:58.230+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:27:58.230+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:27:58.273+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:27:58.272+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:27:58.308+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.158 seconds
+[2026-03-12T09:28:29.060+0000] {processor.py:161} INFO - Started process (PID=6230) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:28:29.063+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:28:29.067+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:28:29.067+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:28:29.100+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:28:29.184+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:28:29.183+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:28:29.251+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:28:29.250+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:28:29.348+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.301 seconds
+[2026-03-12T09:28:59.562+0000] {processor.py:161} INFO - Started process (PID=6235) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:28:59.564+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:28:59.567+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:28:59.567+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:28:59.588+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:28:59.629+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:28:59.628+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:28:59.675+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:28:59.674+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:28:59.776+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.232 seconds
+[2026-03-12T09:29:30.042+0000] {processor.py:161} INFO - Started process (PID=6240) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:29:30.044+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:29:30.051+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:29:30.050+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:29:30.088+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:29:30.161+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:29:30.160+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:29:30.200+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:29:30.200+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:29:30.246+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.228 seconds
+[2026-03-12T09:30:00.371+0000] {processor.py:161} INFO - Started process (PID=6245) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:30:00.372+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:30:00.374+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:30:00.374+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:30:00.388+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:30:00.428+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:30:00.428+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:30:00.459+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:30:00.458+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:30:00.513+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.149 seconds
+[2026-03-12T09:30:30.631+0000] {processor.py:161} INFO - Started process (PID=6250) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:30:30.634+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:30:30.641+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:30:30.641+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:30:30.679+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:30:30.755+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:30:30.754+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:30:30.853+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:30:30.852+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:30:30.940+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.321 seconds
+[2026-03-12T09:31:01.327+0000] {processor.py:161} INFO - Started process (PID=6255) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:31:01.343+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:31:01.378+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:31:01.375+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:31:01.525+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:31:01.785+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:31:01.784+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:31:01.916+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:31:01.915+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:31:01.982+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.805 seconds
+[2026-03-12T09:31:32.047+0000] {processor.py:161} INFO - Started process (PID=6260) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:31:32.048+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:31:32.051+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:31:32.050+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:31:32.104+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:31:32.164+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:31:32.163+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:31:32.201+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:31:32.200+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:31:32.232+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.198 seconds
+[2026-03-12T09:32:02.929+0000] {processor.py:161} INFO - Started process (PID=6265) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:32:02.932+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:32:02.938+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:32:02.937+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:32:02.961+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:32:03.035+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:32:03.035+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:32:03.154+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:32:03.154+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:32:03.203+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.290 seconds
+[2026-03-12T09:32:33.270+0000] {processor.py:161} INFO - Started process (PID=6270) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:32:33.271+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:32:33.274+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:32:33.274+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:32:33.296+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:32:33.359+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:32:33.358+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:32:33.472+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:32:33.472+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:32:33.538+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.276 seconds
+[2026-03-12T09:33:03.664+0000] {processor.py:161} INFO - Started process (PID=6275) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:33:03.669+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:33:03.673+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:33:03.672+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:33:03.689+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:33:03.729+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:33:03.728+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:33:03.760+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:33:03.760+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:33:03.803+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.148 seconds
+[2026-03-12T09:33:33.990+0000] {processor.py:161} INFO - Started process (PID=6280) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:33:33.993+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:33:33.999+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:33:33.998+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:33:34.022+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:33:34.065+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:33:34.065+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:33:34.097+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:33:34.096+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:33:34.123+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.159 seconds
+[2026-03-12T09:34:04.202+0000] {processor.py:161} INFO - Started process (PID=6285) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:34:04.204+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:34:04.208+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:34:04.207+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:34:04.230+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:34:04.301+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:34:04.301+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:34:04.343+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:34:04.343+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:34:04.365+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.174 seconds
+[2026-03-12T09:34:34.547+0000] {processor.py:161} INFO - Started process (PID=6290) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:34:34.548+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:34:34.551+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:34:34.550+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:34:34.566+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:34:34.605+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:34:34.605+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:34:34.632+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:34:34.632+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:34:34.666+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.127 seconds
+[2026-03-12T09:35:04.947+0000] {processor.py:161} INFO - Started process (PID=6295) to work on /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:35:04.949+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/finance_etl_dag.py for tasks to queue
+[2026-03-12T09:35:04.951+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:35:04.951+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:35:04.968+0000] {processor.py:840} INFO - DAG(s) 'daily_etl_pipeline' retrieved from /opt/airflow/dags/finance_etl_dag.py
+[2026-03-12T09:35:05.003+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:35:05.003+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-03-12T09:35:05.105+0000] {logging_mixin.py:188} INFO - [2026-03-12T09:35:05.103+0000] {dag.py:3954} INFO - Setting next_dagrun for daily_etl_pipeline to 2026-03-12 00:00:00+00:00, run_after=2026-03-13 00:00:00+00:00
+[2026-03-12T09:35:05.181+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/finance_etl_dag.py took 0.245 seconds
