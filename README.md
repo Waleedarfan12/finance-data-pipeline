@@ -32,31 +32,28 @@ Raw CSV → PySpark → PostgreSQL (orchestrated by Airflow)
 | **Language** | Python 3.9+ |
 | **Version Control** | Git, GitHub |
 
+
 ## 📁 Project Structure
 
-finance-data-pipeline/
-|
-├── dags/
-| └── finance_etl_dag.py
-|
-├── scripts/
-| ├── ingest.py
-| ├── transform.py
-| └── load.py
-|
-├── sql/
-| └── schema.sql
-|
-├── data_lake/
-| ├── raw/
-| └── processed/
-|
-├── docker-compose.yml
-├── Dockerfile
-├── requirements.txt
-├── .env.example
-├── .gitignore
-└── README.md
+| Directory/File | Description |
+|----------------|-------------|
+| **dags/** | Airflow DAG definitions |
+| └── finance_etl_dag.py | Main ETL orchestration |
+| **scripts/** | ETL modules |
+| └── ingest.py | CSV reader & validation |
+| └── transform.py | PySpark transformations |
+| └── load.py | PostgreSQL writer |
+| **sql/** | Database schemas |
+| └── schema.sql | Star schema DDL |
+| **data_lake/** | Data storage (git-ignored) |
+| └── raw/ | Source CSV files |
+| └── processed/ | Interim processed data |
+| docker-compose.yml | Container orchestration |
+| Dockerfile | Airflow custom image |
+| requirements.txt | Python dependencies |
+| .env.example | Environment template |
+| .gitignore | Git exclusions |
+| README.md | Documentation |
 
 
 ## 💡 Star Schema Design
