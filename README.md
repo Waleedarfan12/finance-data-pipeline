@@ -12,7 +12,27 @@ An end-to-end Financial Data Engineering pipeline that ingests, transforms, and 
 🚀 Pipeline Architecture:
 
 Raw CSV → PySpark → PostgreSQL (orchestrated by Airflow)
+## 📁 Project Structure
 
+- **finance-data-pipeline/**
+  - **dags/**
+    - finance_etl_dag.py
+  - **scripts/**
+    - ingest.py
+    - transform.py
+    - load.py
+  - **sql/**
+    - schema.sql
+  - **data_lake/**
+    - **raw/**
+    - **processed/**
+  - docker-compose.yml
+  - Dockerfile
+  - requirements.txt
+  - .env.example
+  - .gitignore
+  - README.md
+  - 
 ### Data Flow
 1. **Ingestion** → Raw CSV files from `/data_lake/raw/`
 2. **Transformation** → PySpark cleanses, validates, and enriches data
