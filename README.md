@@ -32,63 +32,58 @@ Raw CSV → PySpark → PostgreSQL (orchestrated by Airflow)
 | **Language** | Python 3.9+ |
 | **Version Control** | Git, GitHub |
 
----
+## 📁 Project Structure
 finance-data-pipeline/
 |
 ├── dags/
-|   └── finance_etl_dag.py          # Airflow DAG orchestration
+| └── finance_etl_dag.py # Airflow DAG orchestration
 |
 ├── scripts/
-|   ├── ingest.py                    # CSV reader & validation
-|   ├── transform.py                 # PySpark transformations
-|   └── load.py                      # PostgreSQL writer
+| ├── ingest.py # CSV reader & validation
+| ├── transform.py # PySpark transformations
+| └── load.py # PostgreSQL writer
 |
 ├── sql/
-|   └── schema.sql                   # Star schema DDL
+| └── schema.sql # Star schema DDL
 |
-├── data_lake/                       # (git-ignored)
-|   ├── raw/                         # Source CSV files
-|   └── processed/                   # Interim processed data
+├── data_lake/ # (git-ignored)
+| ├── raw/ # Source CSV files
+| └── processed/ # Interim processed data
 |
-├── docker-compose.yml               # Container orchestration
-├── Dockerfile                       # Airflow custom image
-├── requirements.txt                 # Python dependencies
-├── .env.example                     # Environment template
-├── .gitignore                       # Git exclusions
-└── README.md                        # Documentation
+├── docker-compose.yml # Container orchestration
+├── Dockerfile # Airflow custom image
+├── requirements.txt # Python dependencies
+├── .env.example # Environment template
+├── .gitignore # Git exclusions
+└── README.md # Documentation
 
 
-💡 Star Schema Design
-Fact Table: transactions_fact
+## 💡 Star Schema Design
 
-Column	Type
-transaction_id (PK)	Primary Key
-customer_id (FK)	Foreign Key → customer_dim
-account_id (FK)	Foreign Key → account_dim
-date_id (FK)	Foreign Key → date_dim
-amount	Decimal
-transaction_type	VARCHAR
-Dimension Tables:
+### Fact Table: `transactions_fact`
 
-customer_dim	account_dim	date_dim
-customer_id (PK)	account_id (PK)	date_id (PK)
-name	account_no	full_date
-email	account_type	year
-phone	balance	month
-address	status	quarter
+| Column | Type | Description |
+|--------|------|-------------|
+| transaction_id (PK) | Primary Key | Unique identifier |
+| customer_id (FK) | Foreign Key | References customer_dim |
+| account_id (FK) | Foreign Key | References account_dim |
+| date_id (FK) | Foreign Key | References date_dim |
+| amount | Decimal | Transaction amount |
+| transaction_type | VARCHAR | Type of transaction |
 
-                    ┌─────────────────┐
-                    │ transactions_fact│
-                    │     (Fact)       │
-                    └────────┬────────┘
-                             │
-        ┌────────────────────┼────────────────────┐
-        │                    │                    │
-        ▼                    ▼                    ▼
-┌───────────────┐    ┌───────────────┐    ┌───────────────┐
-│  customer_dim │    │  account_dim  │    │    date_dim   │
-│  (Dimension)  │    │  (Dimension)  │    │  (Dimension)  │
-└───────────────┘    └───────────────┘    └───────────────┘
+### Dimension Tables
+
+| customer_dim | account_dim | date_dim |
+|--------------|-------------|----------|
+| customer_id (PK) | account_id (PK) | date_id (PK) |
+| name | account_no | full_date |
+| email | account_type | year |
+| phone | balance | month |
+| address | status | quarter |
+
+
+
+
                                       
 **Benefits:**
 - ✅ Faster aggregations and rollups
