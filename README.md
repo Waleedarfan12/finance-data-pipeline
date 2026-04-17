@@ -36,26 +36,26 @@ Raw CSV → PySpark → PostgreSQL (orchestrated by Airflow)
 finance-data-pipeline/
 |
 ├── dags/
-| └── finance_etl_dag.py # Airflow DAG orchestration
+| └── finance_etl_dag.py
 |
 ├── scripts/
-| ├── ingest.py # CSV reader & validation
-| ├── transform.py # PySpark transformations
-| └── load.py # PostgreSQL writer
+| ├── ingest.py
+| ├── transform.py
+| └── load.py
 |
 ├── sql/
-| └── schema.sql # Star schema DDL
+| └── schema.sql
 |
-├── data_lake/ # (git-ignored)
-| ├── raw/ # Source CSV files
-| └── processed/ # Interim processed data
+├── data_lake/
+| ├── raw/
+| └── processed/
 |
-├── docker-compose.yml # Container orchestration
-├── Dockerfile # Airflow custom image
-├── requirements.txt # Python dependencies
-├── .env.example # Environment template
-├── .gitignore # Git exclusions
-└── README.md # Documentation
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+├── .env.example
+├── .gitignore
+└── README.md
 
 
 ## 💡 Star Schema Design
