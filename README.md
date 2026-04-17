@@ -33,6 +33,7 @@ Raw CSV → PySpark → PostgreSQL (orchestrated by Airflow)
 | **Version Control** | Git, GitHub |
 
 ## 📁 Project Structure
+
 finance-data-pipeline/
 |
 ├── dags/
