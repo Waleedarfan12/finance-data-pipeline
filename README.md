@@ -9,7 +9,8 @@ An end-to-end Financial Data Engineering pipeline that ingests, transforms, and 
 ![Docker](https://img.shields.io/badge/Docker-24+-brightgreen.svg)
 
 ---
-🚀 Pipeline Architecture
+🚀 Pipeline Architecture:
+
 Raw CSV → PySpark → PostgreSQL (orchestrated by Airflow)
 
 ### Data Flow
@@ -33,68 +34,75 @@ Raw CSV → PySpark → PostgreSQL (orchestrated by Airflow)
 
 ---
 
-## 📁 Project Structure
-
 finance-data-pipeline/
 │
-├── dags/ # Airflow DAG definitions
-│ └── finance_etl_dag.py # Main ETL orchestration DAG
+├── dags/
+│   └── finance_etl_dag.py          # Airflow DAG orchestration
 │
-├── scripts/ # ETL modules
-│ ├── ingest.py # CSV reader & validation
-│ ├── transform.py # PySpark transformations
-│ └── load.py # PostgreSQL writer
+├── scripts/
+│   ├── ingest.py                    # CSV reader & validation
+│   ├── transform.py                 # PySpark transformations
+│   └── load.py                      # PostgreSQL writer
 │
-├── sql/ # Database schemas
-│ └── schema.sql # Star schema DDL
+├── sql/
+│   └── schema.sql                   # Star schema DDL
 │
-├── data_lake/ # Data storage (git-ignored)
-│ ├── raw/ # Source CSV files
-│ └── processed/ # Interim processed data
+├── data_lake/                       # (git-ignored)
+│   ├── raw/                         # Source CSV files
+│   └── processed/                   # Interim processed data
 │
-├── docker-compose.yml # Container orchestration
-├── Dockerfile # Airflow custom image
-├── requirements.txt # Python dependencies
-├── .env.example # Environment template
-├── .gitignore # Git exclusions
-└── README.md # Documentation
+├── docker-compose.yml               # Container orchestration
+├── Dockerfile                       # Airflow custom image
+├── requirements.txt                 # Python dependencies
+├── .env.example                     # Environment template
+├── .gitignore                       # Git exclusions
+└── README.md                        # Documentation
 
 
 ---
 
 ## 💡 Star Schema Design
 
-Optimized for analytical queries and BI reporting:
-┌─────────────────────────────────────────────────────────────┐
-│ FACT TABLE │
-│ ┌───────────────────────┐ │
-│ │ transactions_fact │ │
-│ ├───────────────────────┤ │
-│ │ • transaction_id (PK) │◀──────┐ │
-│ │ • customer_id (FK) │ │ │
-│ │ • account_id (FK) │ │ │
-│ │ • date_id (FK) │ │ │
-│ │ • amount │ │ │
-│ │ • transaction_type │ │ │
-│ └───────────────────────┘ │ │
-└───────────────────────────────────┼──────────────────────────┘
-│
-┌───────────────────────────┼───────────────────────────┐
-│ │ │
-▼ ▼ ▼
-┌───────────────┐ ┌───────────────┐ ┌───────────────┐
-│ DIMENSIONS │ │ DIMENSIONS │ │ DIMENSIONS │
-├───────────────┤ ├───────────────┤ ├───────────────┤
-│ customer_dim │ │ account_dim │ │ date_dim │
-├───────────────┤ ├───────────────┤ ├───────────────┤
-│ • customer_id │ │ • account_id │ │ • date_id │
-│ • name │ │ • account_no │ │ • full_date │
-│ • email │ │ • account_type│ │ • year │
-│ • phone │ │ • balance │ │ • month │
-│ • address │ │ • status │ │ • quarter │
-└───────────────┘ └───────────────┘ └───────────────┘
-
-
+┌─────────────────┐
+│  FACT TABLE     │
+│ transactions_fact│
+├─────────────────┤
+│ transaction_id  │
+│ customer_id ────┼───────┐
+│ account_id ─────┼───────┼───────┐
+│ date_id ────────┼───────┼───────┼───────┐
+│ amount          │       │       │       │
+│ transaction_type│       │       │       │
+└─────────────────┘       │       │       │
+                          │       │       │
+                    ┌─────▼────┐  │       │
+                    │customer  │  │       │
+                    │_dim      │  │       │
+                    ├──────────┤  │       │
+                    │customer_i│  │       │
+                    │name      │  │       │
+                    │email     │  │       │
+                    │phone     │  │       │
+                    └──────────┘  │       │
+                              ┌───▼────┐  │
+                              │account │  │
+                              │_dim    │  │
+                              ├────────┤  │
+                              │account │  │
+                              │_id     │  │
+                              │account │  │
+                              │_no     │  │
+                              │balance │  │
+                              └────────┘  │
+                                      ┌───▼────┐
+                                      │date_dim│
+                                      ├────────┤
+                                      │date_id │
+                                      │full_dat│
+                                      │year    │
+                                      │month   │
+                                      └────────┘
+                                      
 **Benefits:**
 - ✅ Faster aggregations and rollups
 - ✅ Simplified BI tool integration
