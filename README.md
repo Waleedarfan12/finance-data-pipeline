@@ -59,49 +59,37 @@ finance-data-pipeline/
 └── README.md                        # Documentation
 
 
----
+💡 Star Schema Design
+Fact Table: transactions_fact
 
-## 💡 Star Schema Design
+Column	Type
+transaction_id (PK)	Primary Key
+customer_id (FK)	Foreign Key → customer_dim
+account_id (FK)	Foreign Key → account_dim
+date_id (FK)	Foreign Key → date_dim
+amount	Decimal
+transaction_type	VARCHAR
+Dimension Tables:
 
-┌─────────────────┐
-│  FACT TABLE     │
-│ transactions_fact│
-├─────────────────┤
-│ transaction_id  │
-│ customer_id ────┼───────┐
-│ account_id ─────┼───────┼───────┐
-│ date_id ────────┼───────┼───────┼───────┐
-│ amount          │       │       │       │
-│ transaction_type│       │       │       │
-└─────────────────┘       │       │       │
-                          │       │       │
-                    ┌─────▼────┐  │       │
-                    │customer  │  │       │
-                    │_dim      │  │       │
-                    ├──────────┤  │       │
-                    │customer_i│  │       │
-                    │name      │  │       │
-                    │email     │  │       │
-                    │phone     │  │       │
-                    └──────────┘  │       │
-                              ┌───▼────┐  │
-                              │account │  │
-                              │_dim    │  │
-                              ├────────┤  │
-                              │account │  │
-                              │_id     │  │
-                              │account │  │
-                              │_no     │  │
-                              │balance │  │
-                              └────────┘  │
-                                      ┌───▼────┐
-                                      │date_dim│
-                                      ├────────┤
-                                      │date_id │
-                                      │full_dat│
-                                      │year    │
-                                      │month   │
-                                      └────────┘
+customer_dim	account_dim	date_dim
+customer_id (PK)	account_id (PK)	date_id (PK)
+name	account_no	full_date
+email	account_type	year
+phone	balance	month
+address	status	quarter
+
+                    ┌─────────────────┐
+                    │ transactions_fact│
+                    │     (Fact)       │
+                    └────────┬────────┘
+                             │
+        ┌────────────────────┼────────────────────┐
+        │                    │                    │
+        ▼                    ▼                    ▼
+┌───────────────┐    ┌───────────────┐    ┌───────────────┐
+│  customer_dim │    │  account_dim  │    │    date_dim   │
+│  (Dimension)  │    │  (Dimension)  │    │  (Dimension)  │
+└───────────────┘    └───────────────┘    └───────────────┘
                                       
 **Benefits:**
 - ✅ Faster aggregations and rollups
